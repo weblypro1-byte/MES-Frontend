@@ -1,0 +1,97 @@
+.products-page {
+    padding: 2rem;
+    text-align: center;
+  
+    .products-header {
+      margin-bottom: 2rem;
+  
+      .tag {
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #6c63ff;
+        margin-bottom: 0.5rem;
+      }
+  
+      .title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #222;
+      }
+    }
+  
+    .slider-container {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+  
+      .slider {
+        display: flex;
+        gap: 1.5rem;
+        flex: 1;
+        justify-content: center;
+      }
+  
+      .product-card {
+        flex: 1 1 200px;
+        max-width: 250px;
+        background: none;       // ❌ removed background
+        border-radius: 0;       // ❌ removed rounded box
+        padding: 0;             // ❌ removed padding
+        box-shadow: none;       // ❌ removed shadow
+  
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 0;     // ❌ no rounded corners
+          margin-bottom: 0.5rem;
+        }
+  
+        h3 {
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: #333;
+        }
+  
+        // ❌ removed hover animation
+      }
+  
+      .arrow {
+        font-size: 2rem;
+        background: rgb(11, 9, 9);
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        padding: 0.3rem 0.8rem;
+        transition: background 0.3s ease;
+        z-index: 2;
+  
+        &:hover {
+          background: rgba(0, 0, 0, 0.7);
+        }
+  
+        &.left {
+          margin-right: 1rem;
+        }
+  
+        &.right {
+          margin-left: 1rem;
+        }
+      }
+    }
+  
+    // Responsive
+    @media (max-width: 768px) {
+      .slider {
+        flex-direction: column;
+      }
+  
+      .product-card {
+        max-width: 90%;
+        margin: 0 auto;
+      }
+    }
+  }

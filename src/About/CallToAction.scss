@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+.cta-section {
+  width: 100%;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+
+  // diagonal background effect
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.08),
+      rgba(255, 255, 255, 0.08) 80px,
+      transparent 80px,
+      transparent 160px
+    );
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+  }
+
+  .text {
+    flex: 1;
+    min-width: 280px;
+
+    p {
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+  }
+
+  .action {
+    margin-top: 20px;
+
+    .cta-btn {
+      padding: 12px 30px;
+      background: #fff;
+      color: #111;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #f1f1f1;
+        transform: translateY(-2px);
+      }
+    }
+  }
+}

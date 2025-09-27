@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+:root {
+  --purple-500: #6a0dad;
+  --purple-600: #5a0aa9;
+  --bg-form: #f8f5fb;
+  --text: #222;
+  --container-width: 1200px;
+}
+
+.contact-page {
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+  width: 100%;
+
+  /* HERO */
+  .contact-hero {
+    width: 100%;
+    min-height: 360px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(70, 4, 82, 0.55),
+        rgba(50, 3, 59, 0.45)
+      );
+      z-index: 1;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: #fff;
+      padding: 24px;
+      width: 100%;
+      max-width: var(--container-width);
+
+      .hero-title {
+        font-size: 42px;
+        font-weight: 700;
+        margin: 0;
+      }
+
+      .hero-breadcrumb {
+        margin-top: 10px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  /* PARTNERS SECTION */
+  .partners-section {
+    padding: 60px 20px;
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      max-width: var(--container-width);
+      margin: 0 auto;
+    }
+
+    .partners-info {
+      flex: 1 1 60%;
+
+      .intro-text {
+        margin-bottom: 30px;
+        p {
+          margin-bottom: 15px;
+          line-height: 1.6;
+        }
+      }
+
+      .logos-wrapper {
+        text-align: center;
+
+        img {
+          max-width: 100%;
+          height: auto;
+          border: 1px solid #eee;
+          border-radius: 6px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+      }
+    }
+
+    /* CONTACT FORM */
+    .contact-form {
+      flex: 1 1 35%;
+      background: var(--bg-form);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+      h3 {
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        input,
+        select,
+        textarea {
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 6px;
+          font-size: 14px;
+        }
+
+        textarea {
+          min-height: 100px;
+          resize: vertical;
+        }
+
+        .checkbox {
+          font-size: 13px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+
+        button {
+          background: var(--purple-500);
+          color: #fff;
+          border: none;
+          padding: 12px;
+          font-size: 15px;
+          font-weight: 600;
+          border-radius: 6px;
+          cursor: pointer;
+          transition: background 0.3s;
+
+          &:hover {
+            background: var(--purple-600);
+          }
+        }
+      }
+    }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 992px) {
+    .partners-section .container {
+      flex-direction: column;
+    }
+  }
+}

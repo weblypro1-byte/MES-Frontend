@@ -1,0 +1,51 @@
+.logo-carousel {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+  
+    .logo-item {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+  
+      img {
+        max-width: 120px;
+        max-height: 120px;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+  
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  
+    // Slick Dots
+    .slick-dots {
+      bottom: -30px;
+      li button:before {
+        font-size: 10px;
+        color: #666;
+        opacity: 0.7;
+      }
+      li.slick-active button:before {
+        color: #9333ea;
+        opacity: 1;
+      }
+    }
+  
+    // Slick Arrows
+    .slick-prev,
+    .slick-next {
+      z-index: 10;
+      width: 35px;
+      height: 35px;
+    }
+  
+    .slick-prev:before,
+    .slick-next:before {
+      font-size: 35px;
+      color: #9333ea;
+    }
+  }

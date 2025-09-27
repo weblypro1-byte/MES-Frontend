@@ -1,0 +1,46 @@
+.bestit-section {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d")
+      center/cover no-repeat fixed; // ✅ fixed for parallax
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+  
+    // dark overlay
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 15, 25, 0.65);
+      z-index: 1;
+    }
+  
+    // diagonal gradient stripe
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0; left: -40px;
+      width: 140px;
+      height: 130%;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      transform: skewX(-20deg);
+      z-index: 2;
+      opacity: 0.9;
+      filter: drop-shadow(0 0 20px rgba(106, 17, 203, 0.6));
+    }
+  
+    .content {
+      position: relative;
+      z-index: 3;
+      max-width: 800px;
+      padding: 0 1.5rem;
+    }
+  }

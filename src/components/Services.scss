@@ -1,0 +1,189 @@
+.services {
+  text-align: center;
+  padding: 50px 20px; // add side padding for small screens
+
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #000000;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    .card {
+      position: relative;
+      width: 190px;
+      height: 190px;
+      background: #fff;
+      border: 1px solid #eee;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+
+      &.active {
+        background: #1d1729;
+        color: #fff;
+
+        .icon img {
+          filter: brightness(0) invert(1);
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -15px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 0;
+          border-left: 12px solid transparent;
+          border-right: 12px solid transparent;
+          border-top: 15px solid #1d1729;
+        }
+      }
+
+      .icon {
+        margin-top: 40px;
+
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      h4 {
+        margin-top: 15px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .hover-img {
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.9;
+        z-index: 1;
+        animation: slideIn 0.6s forwards;
+        
+      }
+    }
+  }
+
+  .card-content {
+    margin-top: 40px;
+
+    h2 {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 10px 0;
+      color: #666;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      border-radius: 6px;
+      background: #5f2dee;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+  }
+}
+
+// 🔹 Responsiveness
+@media (max-width: 1024px) {
+  .services {
+    .cards {
+      gap: 15px;
+
+      .card {
+        width: 160px;
+        height: 160px;
+      }
+    }
+
+    .section-title {
+      font-size: 24px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 40px 15px;
+
+    .cards {
+      justify-content: center;
+
+      .card {
+        width: 45%; // 2 cards per row
+        height: auto;
+        padding: 20px 10px;
+      }
+    }
+
+    .card-content h2 {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .services {
+    padding: 30px 10px;
+
+    .cards {
+      flex-direction: column;
+      align-items: center;
+
+      .card {
+        width: 90%; // full width on small screens
+        height: 190px;
+        padding: 20px;
+      }
+    }
+
+    .section-title {
+      font-size: 20px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+    }
+
+    .card-content h2 {
+      font-size: 18px;
+    }
+  }
+}
+
+@keyframes slideIn {
+  to {
+    top: 0;
+    opacity: 0.15;
+  }
+}

@@ -1,0 +1,213 @@
+.footer {
+    background: #15101e;
+    color: #b0a9c0;
+    padding: 60px 0 0;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: 
+        linear-gradient(45deg, rgba(88, 28, 135, 0.3), rgba(53, 18, 102, 0.3)),
+        url("../assets/Hover.png") center/cover no-repeat;
+      opacity: 0.1;
+      z-index: 0;
+    }
+  
+    .footer-container {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+      z-index: 1;
+    }
+  
+    .footer-col {
+      display: flex;
+      flex-direction: column;
+  
+      .footer-logo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+  
+        img {
+          height: 50px;
+          margin-right: 10px;
+        }
+  
+        h2 {
+          color: #fff;
+          font-size: 1.8rem;
+          margin: 0;
+        }
+  
+        .system-text {
+          color: #b882fc;
+          font-size: 0.9rem;
+          font-weight: 500;
+          margin-left: 8px;
+        }
+      }
+  
+      p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        color: #cfc8d4;
+      }
+  
+      .footer-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+  
+        &::after {
+          content: "";
+          display: block;
+          width: 50px;
+          height: 2px;
+          background: #b882fc;
+          margin-top: 8px;
+        }
+      }
+  
+      .footer-list {
+        list-style: none;
+        padding: 0;
+  
+        li {
+          position: relative;
+          margin: 12px 0;
+          cursor: pointer;
+          font-size: 0.95rem;
+          transition: color 0.3s ease;
+  
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(to right, #b882fc, transparent);
+            transition: width 0.3s ease;
+          }
+  
+          &:hover::after {
+            width: 40px; // left-aligned short underline
+          }
+  
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+  
+      .newsletter-form {
+        display: flex;
+        margin-bottom: 15px;
+  
+        input {
+          flex: 1;
+          padding: 12px 15px;
+          border: none;
+          border-radius: 5px 0 0 5px;
+          outline: none;
+          background: #2a2238;
+          color: #e6e1f0;
+  
+          &::placeholder {
+            color: #8a7a9c;
+          }
+        }
+  
+        button {
+          background: #b882fc;
+          border: none;
+          padding: 0 18px;
+          border-radius: 0 5px 5px 0;
+          color: #fff;
+          cursor: pointer;
+          transition: background 0.3s;
+  
+          &:hover {
+            background: #a66ef3;
+          }
+        }
+      }
+  
+      .checkbox-container {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 8px;
+  
+        input {
+          margin-top: 4px;
+          margin-right: 10px;
+        }
+  
+        label {
+          font-size: 0.85rem;
+          color: #9f94b3;
+          line-height: 1.4;
+        }
+      }
+  
+      .footer-contact {
+        list-style: none;
+        padding: 0;
+  
+        li {
+          margin: 10px 0;
+          font-size: 0.95rem;
+          color: #cfc8d4;
+        }
+      }
+    }
+  
+    .footer-bottom {
+      background: #0e0b15;
+      text-align: center;
+      padding: 18px 10px;
+      position: relative;
+      z-index: 1;
+  
+      p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: #b0a9c0;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .footer-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 0 15px 20px;
+      }
+  
+      .newsletter-form {
+        flex-direction: column;
+  
+        input,
+        button {
+          width: 100%;
+          border-radius: 5px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  

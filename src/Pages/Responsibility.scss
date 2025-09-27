@@ -1,0 +1,109 @@
+/* HERO */
+.contact-hero {
+    width: 100%;
+    min-height: 360px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(70, 4, 82, 0.55),
+        rgba(50, 3, 59, 0.45)
+      );
+      z-index: 1;
+    }
+  
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: #fff;
+      padding: 24px;
+      width: 100%;
+      max-width: var(--container-width);
+  
+      .hero-title {
+        font-size: 42px;
+        font-weight: 700;
+        margin: 0;
+      }
+  
+      .hero-breadcrumb {
+        margin-top: 10px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .responsibility-page {
+    padding: 4rem 8%;
+    font-family: "Poppins", sans-serif;
+    background: #fff;
+    color: #333;
+  
+    .page-title {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 800;   // stronger bold
+      margin-bottom: 3.5rem;
+      color: #111;
+      letter-spacing: 0.5px;
+    }
+  
+    .responsibility-section {
+      margin-bottom: 3rem;
+  
+      h2 {
+        font-size: 2rem;
+        font-weight: 800;   // bold heading
+        margin-bottom: 1.2rem;
+        color: #6a1b9a;
+        letter-spacing: 0.5px;
+        position: relative;
+  
+        // purple underline effect
+        &::after {
+          content: "";
+          display: block;
+          width: 60px;
+          height: 3px;
+          background: #6a1b9a;
+          margin-top: 6px;
+          border-radius: 2px;
+        }
+      }
+  
+      p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+        color: #444;
+        font-weight: 400;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      padding: 2rem 5%;
+  
+      .page-title {
+        font-size: 2.4rem;
+      }
+  
+      .responsibility-section h2 {
+        font-size: 1.6rem;
+      }
+  
+      .responsibility-section p {
+        font-size: 1rem;
+      }
+    }
+  }

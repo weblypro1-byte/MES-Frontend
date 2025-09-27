@@ -1,0 +1,313 @@
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+:root {
+  --purple-500: #6a0dad;
+  --purple-600: #5a0aa9;
+  --bg-form: #f8f5fb;
+  --text: #222;
+  --container-width: 1200px;
+}
+
+.contact-page {
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+  width: 100%;
+  display: block;
+
+  /* ---------------- HERO (FULL WIDTH) ---------------- */
+  .contact-hero {
+    width: 100%;
+    min-height: 360px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    /* purple overlay similar to screenshot */
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(70, 4, 82, 0.55),
+        rgba(50, 3, 59, 0.45)
+      );
+      z-index: 1;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: #fff;
+      padding: 24px 20px;
+      width: 100%;
+      max-width: var(--container-width);
+      margin: 0 auto;
+
+      .hero-title {
+        font-size: 39px;
+        letter-spacing: 2px;
+        margin: 0;
+        font-weight: 700;
+      }
+
+      .hero-breadcrumb {
+        margin-top: 8px;
+        opacity: 0.95;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  /* ---------------- MAIN CONTACT AREA ---------------- */
+  .contact-main {
+    background: #fff;
+    padding: 72px 20px;
+  }
+
+  .container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 520px;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .left {
+    .small-sub {
+      display: inline-block;
+      color: var(--purple-500);
+      font-weight: 600;
+      letter-spacing: 0.6px;
+      margin-bottom: 8px;
+    }
+    .big-title {
+      font-size: 34px;
+      margin: 6px 0 28px 0;
+      line-height: 1.05;
+      color: #0f1720;
+    }
+
+    .contacts-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+
+      .contact-row {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+
+        .icon-wrap {
+          flex: 0 0 62px;
+          width: 62px;
+          height: 62px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #fff;
+          border: 3px solid var(--purple-500);
+          box-shadow: 0 8px 24px rgba(106, 13, 173, 0.12);
+          transition: transform 0.18s ease;
+
+          img {
+            width: 25px;
+            height: 25px;
+            object-fit: contain;
+          }
+        }
+
+        .contact-text {
+          .label {
+            font-weight: 600;
+            color: #6b6b6b;
+            font-size: 13px;
+          }
+          a {
+            display: block;
+            font-weight: 700;
+            color: #111;
+            text-decoration: none;
+            margin-top: 4px;
+          }
+        }
+      }
+    }
+  }
+
+  .right {
+    background: var(--bg-form);
+    border-radius: 8px;
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+
+    /* decorative large faint circle on the right like screenshot */
+    &::before {
+      content: "";
+      position: absolute;
+      right: -120px;
+      top: -40px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: rgba(106, 13, 173, 0.06);
+      z-index: 0;
+    }
+
+    .contact-form {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 13px;
+        margin-bottom: 6px;
+        color: #444;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 12px 14px;
+        border-radius: 6px;
+        border: 1px solid #e6e1ea;
+        font-size: 14px;
+        background: #fff;
+        outline: none;
+        transition: border-color 0.18s;
+      }
+
+      input:focus,
+      textarea:focus {
+        border-color: var(--purple-500);
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 160px;
+      }
+
+      .btn-submit {
+        margin-top: 6px;
+        background: var(--purple-500);
+        color: #fff;
+        border: none;
+        padding: 10px 18px;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.18s, transform 0.12s;
+      }
+
+      .btn-submit:hover {
+        background: var(--purple-600);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  /* ---------------- MAP ---------------- */
+  .map-wrapper {
+    margin-top: 36px;
+    .map-container {
+      width: 100%;
+      height: 340px;
+      max-height: 480px;
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+    }
+  }
+
+  /* Flaticon credits */
+  .flaticon-credits {
+    max-width: var(--container-width);
+    margin: 18px auto 60px;
+    font-size: 12px;
+    color: #666;
+    padding: 0 20px;
+  }
+
+  /* ---------------- RESPONSIVE ---------------- */
+  @media (max-width: 1150px) {
+    .container {
+      grid-template-columns: 1fr 420px;
+      gap: 28px;
+    }
+
+    .contact-hero {
+      min-height: 300px;
+      .hero-inner .hero-title {
+        font-size: 46px;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-hero {
+      min-height: 260px;
+      .hero-inner .hero-title {
+        font-size: 40px;
+      }
+    }
+
+    .right {
+      order: 2;
+      padding: 22px;
+      &::before {
+        right: -90px;
+        width: 240px;
+        height: 240px;
+      }
+    }
+
+    .left {
+      order: 1;
+      margin-bottom: 14px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .contact-hero {
+      min-height: 200px;
+      .hero-inner .hero-title {
+        font-size: 28px;
+      }
+      .hero-inner .hero-breadcrumb {
+        font-size: 12px;
+      }
+    }
+
+    .container {
+      padding: 0 18px;
+    }
+
+    .left .big-title {
+      font-size: 22px;
+    }
+
+    .right {
+      padding: 16px;
+    }
+  }
+}
