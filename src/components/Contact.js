@@ -42,9 +42,7 @@ const Contact = () => {
       >
         <div className="hero-inner">
           <h1 className="hero-title">CONTACT</h1>
-          <nav className="hero-breadcrumb" aria-label="Breadcrumb">
-            HOME <span className="sep">›</span> CONTACT
-          </nav>
+          
         </div>
       </header>
 
@@ -53,19 +51,11 @@ const Contact = () => {
         <div className="container">
           {/* Left info */}
           <div className="left">
-            <span className="small-sub">Contact With Us</span>
+            <span className="small-sub">Connect With Our Team</span>
             <h2 className="big-title">Feel Free to Get in Touch</h2>
 
             <div className="contacts-list">
-              <div className="contact-row">
-                <div className="icon-wrap">
-                  <img src={ICON_PHONE} alt="phone icon" />
-                </div>
-                <div className="contact-text">
-                  <div className="label">Federal GSA</div>
-                  <a href="tel:4842146541">484-214-6541</a>
-                </div>
-              </div>
+             
 
               <div className="contact-row">
                 <div className="icon-wrap">
@@ -73,7 +63,7 @@ const Contact = () => {
                 </div>
                 <div className="contact-text">
                   <div className="label">Sales</div>
-                  <a href="tel:2672998248">267-299-8248</a>
+                  <a href=""> (will provide later)</a>
                 </div>
               </div>
 
@@ -84,7 +74,7 @@ const Contact = () => {
                 <div className="contact-text">
                   <div className="label">Send Email</div>
                   <a href="mailto:sales@cirrussystemsus.com">
-                    sales@cirrussystemsus.com
+                  Gov-Buy@modern-sol.com
                   </a>
                 </div>
               </div>
@@ -100,7 +90,7 @@ const Contact = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    618 S Broad Street, Suite 2 Lansdale PA 19446-5200
+                12420 Colorado Ave, Bakersfield, CA 93312, USA.
                   </a>
                 </div>
               </div>

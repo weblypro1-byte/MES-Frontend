@@ -9,7 +9,7 @@ import Aboutus from './About/Aboutus';
 import OurCustomer from './components/OurCustomer';
 import Contract from './components/Contract';
 import Product from './components/Product';
-import Solutions from './components/solutions';
+import Partners from './components/partners';
 import CoreValuesPage from './Pages/CoreValuesPage';
 import Responsibilty from './Pages/Responsibilty';
 
@@ -31,7 +31,7 @@ function App() {
         
         <Route path="/Contract" element={<Contract />} />
         <Route path="/Product" element={<Product />} />
-        <Route path="/solutions" element={<Solutions />} />
+        <Route path="/partners" element={<Partners />} />
        
       
       </Routes>

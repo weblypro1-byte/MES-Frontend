@@ -10,10 +10,10 @@ const Hero = () => {
   const slides = [
     {
       id: 1,
-      image:"https://res.cloudinary.com/dz7nbmwai/image/upload/v1758696077/Hero_t6sv76.webp",
+      image:"https://blog.onevasco.com/wp-content/uploads/Reasons-to-Visit-USA.png",
       title: "MODERN ENTERPRISE SOLUTIONS LLC",
       
-      description: "Your trusted partner for everything IT."
+      description: "All your IT needs, one trusted partner."
     },
     {
       id: 2,
@@ -73,8 +73,19 @@ const Hero = () => {
                 </h1>
                 <p className="slide-description">{slide.description}</p>
                 <div className="hero-buttons">
-                <a className="btn btn-primary">Get Started</a>
-<a className="btn btn-secondary">Learn More</a>
+                {/* <a className="btn btn-primary">Get Started</a> */}
+                <a 
+  className="btn btn-primary"
+  onClick={(e) => {
+    e.preventDefault();
+    document.getElementById("services").scrollIntoView({
+      behavior: "smooth",
+    });
+  }}
+>
+  Learn More
+</a>
+
 
                 </div>
               </div>

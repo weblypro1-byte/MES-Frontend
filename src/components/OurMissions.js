@@ -30,13 +30,13 @@ const OurMissions = () => {
               
               <div className="mission-vision">
                 <div className="mission">
-                  <h5>Mission</h5>
-                  <p className="quote">"Timely bring the latest in technology and innovation to our customers so they remain ahead of the game"</p>
+                  <h5>Visions</h5>
+                  <p className="quote">"To be a trusted leader in IT solutions by continually enhancing efficiency, streamlining processes, and ensuring our customers’ long-term success"</p>
                 </div>
                 
                 <div className="vision">
-                  <h5>Vision</h5>
-                  <p className="quote">"To ensure we continue to fulfil our mission and strategically streamline our processes to achieve increased efficiency"</p>
+                  <h5>Missions</h5>
+                  <p className="quote">"To deliver the latest technology and innovative solutions on time, empowering our customers to stay ahead in a fast-changing digital world"</p>
                 </div>
               </div>
             </div>

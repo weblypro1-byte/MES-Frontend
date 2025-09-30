@@ -25,21 +25,21 @@
   
     .images-stack {
       position: relative;
-      height: 600px;       // ✅ FIX: contain absolute images inside
+      height: 850px;  // ⬆ increased to fit 3 images
       overflow: hidden;    // ✅ FIX: prevent bleeding into other sections
     }
   
     .exp-image {
       position: absolute;   // ✅ FIX: both images absolutely positioned inside .images-stack
-      margin-bottom: 0;     // ✅ FIX: not needed with absolute
+          // ✅ FIX: not needed with absolute
   
       img {
         width: 100%;
-        max-width: 520px;
-        border-radius: 1rem;
-        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
-        display: block;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      max-width: 520px;
+      border-radius: 1rem;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+      display: block;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
   
       &:hover img {
@@ -47,20 +47,26 @@
         box-shadow: 0 18px 36px rgba(0, 0, 0, 0.3);
       }
   
-      /* First image sits higher */
-      &:first-child {
-        top: 0;        // ✅ FIX: anchored at top
-        left: 0;
-        z-index: 2;
-      }
-  
-      /* Second image overlaps upward */
-      &.shifted {
-        top: 280px;    // ✅ FIX: moved inside container instead of page
-        left: 80px;
-        width: 90%;
-        z-index: 1;
-      }
+      
+    &.first {
+      top: 0;
+      left: 0;
+      z-index: 3;
+    }
+
+    &.second {
+      top: 280px;
+      left: 80px;
+      width: 90%;
+      z-index: 2;
+    }
+
+    &.third {
+      top: 560px;   // push further down
+      left: 40px;
+      width: 85%;
+      z-index: 1;
+    }
     }
   
     /* Circle outline decoration */

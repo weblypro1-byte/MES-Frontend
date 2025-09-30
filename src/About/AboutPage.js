@@ -15,18 +15,10 @@ return (
     
 <h2>Who We Are</h2>
 <p>
-MES is a one stop Value Added Reseller solution provider for all things IT catering to our esteemed Federal Clientele over GSA Advantage, GSA eBuy, SAM BETA and Unison.
-From software updates to hardware upgrades, from the newest in tech to the easiest to use at the comfort of your home or the office,
-Cirrus Systems is here to serve your needs for emerging technologies.
+MES is a comprehensive Value-Added Reseller and IT solutions provider with proven experience supporting Federal agencies. We deliver end-to-end technology solutions, from software enhancements to hardware modernization, ensuring our customers have access to the latest innovations and user-friendly systems that drive efficiency in both office and remote environments. Backed by trusted Federal contracting expertise, MES LLC is committed to empowering our clients with reliable, secure, and future-ready IT solutions. 
 </p>
 
 
-<h2>Where We Stand</h2>
-<p>
-Moving forward 2 years, we are proud to announce that we are tiered with the finest brands and distribution network in the industry.
-Our portfolio comprises an all-inclusive product line of Desktop & Workstations, Monitors & Projectors, Printers & Scanners,
-Storage and Backup, Power Supplies, Cables, Memory and Software Licensing which our customers get the privilege to enjoy at unbeatable pricing.
-</p>
 </section>
 
 

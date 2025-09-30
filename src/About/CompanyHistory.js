@@ -33,14 +33,13 @@ export default function CompanyHistory() {
         <div className="text-content">
           <span className="subtitle">We are MODERN ENTERPRISE SOLUTIONS 
 .</span>
-          <h2>Company History</h2>
+          <h2>Modern Enterprise Solutions LLC (MES) </h2>
           <p>
-            MES Consulting LLC is a small business registered 2009 in Pennsylvania 
-            under Minority Owned Small Disadvantaged Business category. MES commenced 
-            as Real Estate and in 2020 established a business unit <strong>‘MODERN ENTERPRISE SOLUTIONS’</strong> 
-            to become a value-added reseller providing hardware, software & IT solutions. 
-            Our customers and channel partners now know us as MES Consulting LLC 
-            (<em>doing business as MES Systems</em>).
+           
+
+
+            Founded in 2020, Modern Enterprise Solutions LLC is a Women-Owned Small Business committed to delivering Value-Added IT solutions. We specialize in providing hardware, software, and technology services that empower organizations to achieve their missions with efficiency and innovation. Today, our customers and channel partners recognize us as MES, a trusted partner for end-to-end IT solutions across the United States. 
+           
           </p>
         </div>
       </div>

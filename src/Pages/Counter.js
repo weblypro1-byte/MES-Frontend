@@ -3,10 +3,10 @@ import CountUp from "react-countup";
 import "./Counter.scss";
 
 const stats = [
-  { id: 1, number: 330, label: "Active Clients" },
-  { id: 2, number: 980, label: "Projects Completed" },
-  { id: 3, number: 13, label: "Glorious Years" },
-  { id: 4, number: 50, label: "Professional Team" },
+  { id: 1, number: 238, label: "Active Clients" },
+  { id: 2, number: 706, label: "Projects Completed" },
+  { id: 3, number: 5, label: "Glorious Years" },
+  { id: 4, number: 36, label: "Professional Team" },
 ];
 
 export default function StatsSection() {

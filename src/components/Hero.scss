@@ -1,4 +1,10 @@
-// Variables
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 $primary-color: #5F2DEE;
 $secondary-color: #B882FC;
 $white: #FFFFFF;
@@ -89,23 +95,36 @@ $overlay-color: rgba(29, 23, 41, 0.7);
 
 // Hero Section
 .hero-section {
-    position: relative;
-    height: 100vh;     // full screen height
-    width: 100%;       // full width
-    min-height: 600px;
-    margin-top: 0;
-    z-index: 0;        // stays behind header
-    overflow: hidden;  // crop any overflow of image zoom
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  min-height: 600px;
+  margin-top: 0;
+  
+  
+  z-index: 1; 
+  margin-top: -80px; 
+  padding-top: 80px;
+}
+
+.main-header:not(.scrolled) {
+  background: transparent !important;
+  box-shadow: none !important;
+
+   
+  
+   
+   
   }
   
   .slide-overlay {
-  background: linear-gradient(
-    135deg,
-    rgba(64, 61, 61, 0.6) 0%,   // add alpha
-    rgba(52, 2, 255, 0.46) 100%
-  );
-}
-
+    background: linear-gradient(
+      90deg,
+      rgba(188, 188, 196, 0.798) 0%,    // royal blue
+      rgba(96, 45, 238, 0.704) 100%   // soft purple
+    );
+  }
+  
 
 
 
@@ -126,7 +145,12 @@ $overlay-color: rgba(29, 23, 41, 0.7);
     z-index: 2;
     
     .slide-image {
-      animation: zoomIn 5s ease-in-out forwards;
+      animation: fadeIn 2s ease forwards;
+      @keyframes fadeIn {
+        to { opacity: 1; }
+      }
+      
+
       
     }
     
@@ -162,6 +186,8 @@ $overlay-color: rgba(29, 23, 41, 0.7);
     background-repeat: no-repeat; // prevent tiling
     object-fit: cover;          // ensures proper scaling
     transform: scale(1);
+    z-index: -1; // push image below everything
+
   }
   
 
@@ -171,7 +197,7 @@ $overlay-color: rgba(29, 23, 41, 0.7);
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgb(64, 61, 61) 0%, rgba(52, 2, 255, 0.46) 100%);
+    // background: linear-gradient(135deg, rgb(64, 61, 61) 0%, rgba(52, 2, 255, 0.46) 100%);
     z-index: 1;
   }
 
@@ -580,32 +606,4 @@ $overlay-color: rgba(29, 23, 41, 0.7);
   
   .scroll-line::after {
     animation: none !important;
-  }
-}.main-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background: transparent;
-    padding: 15px 0;
-    @include transition(all, 0.3s);
-  
-    &.scrolled {
-      background: $white;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  
-      .nav a { color: $black; }
-    }
-  
-    .nav a {
-      color: $white;
-      text-decoration: none;
-      font-weight: 500;
-      padding: 8px 15px;
-      @include transition(color, 0.3s);
-  
-      &:hover { color: $secondary-color; }
-    }
-  }
-  
+  } }

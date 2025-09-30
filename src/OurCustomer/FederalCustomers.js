@@ -4,13 +4,17 @@ import "./FederalCustomers.scss";
 export default function FederalCustomers() {
   useEffect(() => {
     const elements = document.querySelectorAll(
-      ".federal-customers img, .federal-customers .content"
+      ".federal-customers img, .federal-customers .content, .federal-customers .features li"
     );
-
+  
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
+        entries.forEach((entry, index) => {
           if (entry.isIntersecting) {
+            // stagger animation for list items
+            if (entry.target.tagName === "LI") {
+              entry.target.style.animationDelay = `${0.2 * index}s`;
+            }
             entry.target.classList.add("animate");
           } else {
             entry.target.classList.remove("animate");
@@ -19,13 +23,14 @@ export default function FederalCustomers() {
       },
       { threshold: 0.2 }
     );
-
+  
     elements.forEach((el) => observer.observe(el));
-
+  
     return () => {
       elements.forEach((el) => observer.unobserve(el));
     };
   }, []);
+  
 
   return (
     <>
@@ -38,20 +43,13 @@ export default function FederalCustomers() {
   >
     <div className="hero-inner">
       <h1 className="hero-title">Our Customers</h1>
-      <nav className="hero-breadcrumb" aria-label="Breadcrumb">
-        HOME <span className="sep">›</span> Our Customers
-      </nav>
+      
     </div>
   </header>
     <section className="federal-customers">
       <div className="container">
         {/* Left Image */}
-        <div className="image-box">
-          <img
-            src="https://cirrussystemsus.com/wp-content/uploads/2023/01/Blank-3-Grids-Collage-1.png"
-            alt="Federal Landmark"
-          />
-        </div>
+       
 
         {/* Right Content */}
         <div className="content">
@@ -60,33 +58,45 @@ export default function FederalCustomers() {
           </a>
           <h2>Federal and State Customers</h2>
           <p>
-            We serve the government markets providing products and services to
-            lead the federal agencies to next generation technologies. Our focus
-            remains to establish stronger relationship with our supply chain
-            which primarily includes industry’s leading technology manufacturers
-            and distributors who allow our customers the privilege to procure
-            first-class IT Hardware, Software and Solutions timely.
+          At MES, we serve the U.S. Government market with a focus on delivering next-generation technologies. 
           </p>
-          <p>
-            We have over 30 years of combined experience in the technology space
-            to offer turnkey solutions and produce customer-centric results. See
-            what our customers have to say...
-          </p>
+          
+          
 
           <ul className="features">
             <li>
-              <span className="icon">➜</span> Address a variety of application
-              needs.
+              <span className="icon">➜</span> Provide federal agencies with cutting-edge IT hardware, software, and solutions. 
             </li>
             <li>
-              <span className="icon">➜</span> Support development approaches and
-              devices.
+              <span className="icon">➜</span> Partner with leading technology manufacturers and distributors to ensure timely delivery of first-class products. 
             </li>
             <li>
-              <span className="icon">➜</span> Improves reliability with
-              information backed up.
+              <span className="icon">➜</span>Offer over 20 years of combined expertise in technology, procurement, and federal contracting. 
             </li>
+            <li>
+              <span className="icon">➜</span> Deliver turnkey solutions designed to meet diverse application needs. 
+              </li>
+              <li>  <span className="icon">➜</span> Support a wide range of development approaches, platforms, and devices.  </li>
+          
+            <li>
+              <span className="icon">➜</span> Partner with leading technology manufacturers and distributors to ensure timely delivery of first-class products. 
+            </li>
+            <li>
+              <span className="icon">➜</span>Enhance reliability through secure, backed-up information management.  
+            </li> 
+          
+            <li>
+              <span className="icon">➜</span> Prioritize customer satisfaction with results-driven, customer-centric services.  
+            </li>
+      
+          
           </ul>
+        </div>
+        <div className="image-box">
+          <img
+            src="https://cirrussystemsus.com/wp-content/uploads/2023/01/Blank-3-Grids-Collage-1.png"
+            alt="Federal Landmark"
+          />
         </div>
       </div>
     </section>

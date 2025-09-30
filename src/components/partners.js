@@ -147,9 +147,9 @@ const PartnersPage = () => {
         role="banner"
       >
         <div className="hero-inner">
-          <h1 className="hero-title">Solutions</h1>
+          <h1 className="hero-title">Partners</h1>
           <nav className="hero-breadcrumb" aria-label="Breadcrumb">
-            HOME <span className="sep">›</span> SOLUTIONS
+            HOME <span className="sep">›</span> Partners
           </nav>
         </div>
       </header>
@@ -161,18 +161,10 @@ const PartnersPage = () => {
           <div className="partners-info">
             <div className="intro-text">
               <p>
-                Aurora has developed close, long-term partnerships with key
-                industry-leading security and information technology vendors in
-                order to bring our clients world-class solutions.
-              </p>
-              <p>
-                Our Premier Partners are recognized leaders in their specialties,
-                representing best-of-breed security technologies across the
-                enterprise. Aurora’s Strategic Partners provide specialized and
-                innovative solutions that complement our core security offerings,
-                while our Technology Partners help us deliver an end-to-end
-                technology solution.
-              </p>
+            Modern Enterprise Solutions (MES Systems) has built strong, long-term partnerships with leading technology manufacturers and distributors to deliver world-class IT solutions to our federal and enterprise customers. 
+<br/>
+Our Premier Partners are recognized industry leaders, providing best-in-class hardware, software, and security technologies across the enterprise. Through our Strategic Partners, we bring specialized and innovative solutions that complement our core offerings, while our Technology Partners enable us to deliver complete, end-to-end IT solutions tailored to our customers’ missions. 
+</p>
             </div>
             <div className="logos-wrapper">
               <img src={LOGOS_IMAGE} alt="Aurora Partners" />
@@ -181,7 +173,6 @@ const PartnersPage = () => {
 
           {/* RIGHT: Contact Form */}
           <div className="contact-form">
-            <h3>Talk to Aurora</h3>
             <form onSubmit={handleSubmit}>
               <input
                 type="text"

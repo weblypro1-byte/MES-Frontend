@@ -6,25 +6,13 @@ export default function WhatWeDo() {
     <section className="what-we-do">
       <div className="container">
         <span className="subtitle">— Our Expert People</span>
-        <h2>What We Do</h2>
-        <p>
-          We had our modest beginning during the midst of COVID-19 with an agenda
-          to solve the biggest problem our customers face with numerous
-          uncertainties – flexibility, scalability, productivity, compatibility
-          and security, impeding their core operation. Delayed deliveries, lack
-          of availability of essential resources to facilitate remote working
-          were reasons forefront which powered our drive to step in.
-        </p>
-        <p>
-          Our team of technical expertise, federal sales team and procurement
-          specialists who are vetted conducting business with the US Federal for
-          15 plus years worked around the clock, exhausting their network to
-          ensure deliverables are procured timely and above all at competitive
-          pricing to achieve complete customer satisfaction. Result; We did it!
-          Our aim was straightforward to simplify the difficulties of IT supply
-          chain process and to provide our customers the best in IT solutions so
-          they stay ahead of their game.
-        </p>
+        
+        
+       
+<h2>Our Story</h2>
+<p>
+Modern Enterprise Solutions LLC (MES) was founded during COVID-19 to address the IT challenges customers faced in uncertain times. With a team of experts having over 20 years of federal contracting experience, we streamlined procurement and delivered critical technology on time and at competitive prices. Our mission is simple: to simplify the IT supply chain and provide reliable, secure, and innovative solutions that keep our customers ahead. 
+</p>
       </div>
     </section>
   );

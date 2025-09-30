@@ -27,11 +27,7 @@ const ChannelPartnersPage = () => {
   return (
     <section className="channel-partners">
       <div className="container">
-        <h2 className="title">Channel Partners</h2>
-        <p className="subtitle">
-          Established channel partnership with leading manufacturers and distributors in the industry offering 
-          TAA, Energy Star and EPEAT compliant products.
-        </p>
+        
 
         <Swiper
           modules={[Autoplay, Navigation]}

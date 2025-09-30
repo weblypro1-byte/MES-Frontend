@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import CompanyHistory from "./CompanyHistory";
-import Counter from '../Pages/Counter';
+
 import AboutPage from './AboutPage';
 import Bestitsolutions from './Bestitsolutions';
 
@@ -24,14 +24,7 @@ const Home = () => {
         <CompanyHistory/>
       </motion.div>
 
-        <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={sectionVariant}
-            >
-              <Counter/>
-            </motion.div>
+       
 
             <motion.div
         initial="hidden"

@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import FederalCustomers from '../OurCustomer/FederalCustomers';
 import Experience from '../OurCustomer/Experience';
-import Testimonials from '../OurCustomer/Testimonials';
+
 import Logos from '../OurCustomer/Logos';
 
 const sectionVariant = {
@@ -29,7 +29,7 @@ const Home = () => {
               viewport={{ once: true, amount: 0.2 }}
               variants={sectionVariant}
             >
-              <Experience/>
+           <Logos/>
             </motion.div>
 
             <motion.div
@@ -38,17 +38,11 @@ const Home = () => {
         viewport={{ once: true, amount: 0.2 }}
         variants={sectionVariant}
       >
-        <Testimonials />
+        
+        <Experience/>
       
       </motion.div>
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={sectionVariant}
-      >
-        <Logos/>
-      </motion.div>
+    
 
 
 

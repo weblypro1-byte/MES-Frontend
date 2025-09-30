@@ -16,8 +16,8 @@ const ClientStoriesPage = () => {
           </div>
           <div className="story-text">
             <p>
-              We’re providing IT solutions to all countries{" "}
-              <strong>Worldwide</strong>
+              We’re providing IT solutions across the {" "}
+              <strong>United States</strong>
             </p>
           </div>
         </div>
