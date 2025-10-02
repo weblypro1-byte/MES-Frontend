@@ -1,4 +1,8 @@
+import 'antd/dist/reset.css';
+import { message } from "antd";   // ✅ import message here
+
 import React from "react";
+
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home"; // ✅ import Home page
@@ -12,29 +16,27 @@ import Product from './components/Product';
 import Partners from './components/partners';
 import CoreValuesPage from './Pages/CoreValuesPage';
 import Responsibilty from './Pages/Responsibilty';
+import BackButton from './BackButton';
+import  ErrorPage from './ErrorPage'
 
 function App() {
   return (
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} /> {/* ✅ linked Home.js */}
-     
-        <Route path="/OurCustomer" element={<OurCustomer />} />
+  <Route path="/" element={<div className="page-animation"><Home /></div>} />
+  <Route path="/OurCustomer" element={<div className="page-animation"><OurCustomer /></div>} />
+  <Route path="/contact" element={<div className="page-animation"><Contact /></div>} />
+  <Route path="/aboutus" element={<div className="page-animation"><Aboutus /></div>} />
+  <Route path="/coreValuesPage" element={<div className="page-animation"><CoreValuesPage /></div>} />
+  <Route path="/responsibilty" element={<div className="page-animation"><Responsibilty /></div>} />
+  <Route path="/Contract" element={<div className="page-animation"><Contract /></div>} />
+  <Route path="/Product" element={<div className="page-animation"><Product /></div>} />
+  <Route path="/partners" element={<div className="page-animation"><Partners /></div>} />
+  <Route path="*" element={<div className="page-animation"><ErrorPage /></div>} />
+</Routes>
 
-
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/aboutus" element={<Aboutus />} />
-        <Route path="/coreValuesPage" element={<CoreValuesPage />} />
-        <Route path="/responsibilty" element={<Responsibilty />} />
-
-        
-        <Route path="/Contract" element={<Contract />} />
-        <Route path="/Product" element={<Product />} />
-        <Route path="/partners" element={<Partners />} />
-       
-      
-      </Routes>
+      <BackButton />
       <Footer/>
     </>
   );

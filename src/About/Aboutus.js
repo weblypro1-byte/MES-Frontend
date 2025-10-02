@@ -5,7 +5,6 @@ import CompanyHistory from "./CompanyHistory";
 import AboutPage from './AboutPage';
 import Bestitsolutions from './Bestitsolutions';
 
-import Whatwedo from './Whatwedo';
 import CallltoAction from './CallltoAction'
 const sectionVariant = {
   hidden: { opacity: 0, y: 50 },
@@ -45,14 +44,7 @@ const Home = () => {
       </motion.div>
 
 
-       <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={sectionVariant}
-            >
-              <Whatwedo />
-            </motion.div>
+      
       
             {/* COUNTER */}
             <motion.div

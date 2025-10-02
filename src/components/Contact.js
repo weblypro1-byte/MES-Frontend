@@ -11,7 +11,7 @@ const Contact = () => {
 
   const handleSubmit = async (values) => {
     try {
-      const res = await fetch("http://localhost:5000/api/contact", {
+      const res = await fetch("http://localhost:5001/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
@@ -19,17 +19,37 @@ const Contact = () => {
 
       const data = await res.json();
       if (data.success) {
-        message.success("✅ Message sent successfully!");
+        message.success({
+          content: 'Message sent successfully! We will get back to you soon.',
+          duration: 5,
+          style: { 
+            marginTop: '20vh',
+            textAlign: 'center'
+          }
+        });
         form.resetFields();
       } else {
-        message.error("❌ Failed: " + data.message);
+        message.error({
+          content: `${data.message || 'Failed to send message. Please try again.'}`,
+          duration: 5,
+          style: { 
+            marginTop: '20vh',
+            textAlign: 'center'
+          }
+        });
       }
     } catch (err) {
       console.error(err);
-      message.error("⚠️ Something went wrong.");
+      message.error({
+        content: 'Something went wrong. Please check your connection.',
+        duration: 5,
+        style: { 
+          marginTop: '20vh',
+          textAlign: 'center'
+        }
+      });
     }
   };
-
   return (
     <div className="contact-page">
       {/* HERO */}
@@ -133,7 +153,7 @@ const Contact = () => {
               </Form.Item>
 
               <Form.Item>
-                <Button type="primary" htmlType="submit" block>
+                <Button type="" htmlType="submit" block>
                   Submit
                 </Button>
               </Form.Item>
@@ -144,14 +164,15 @@ const Contact = () => {
 
       {/* Map */}
       <section className="map-wrapper">
-        <div className="map-container">
-          <iframe
-            title="company-location"
-            src="https://maps.google.com/maps?q=618%20S%20Broad%20St%20Lansdale%20PA&t=m&z=14&output=embed"
-            loading="lazy"
-          />
-        </div>
-      </section>
+    <div className="map-container">
+      <iframe
+        title="MES-Location"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3251.7935379253668!2d-119.1407434!3d35.4103678!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80ea44a8747ab207%3A0xc51921a28807c8e!2s12420%20Colorado%20Ave%2C%20Bakersfield%2C%20CA%2093312%2C%20USA!5e0!3m2!1sen!2s!4v1759229424459!5m2!1sen!2s"
+        loading="lazy"
+      />
+
+    </div>
+  </section>
     </div>
   );
 };

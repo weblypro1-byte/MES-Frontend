@@ -3,20 +3,21 @@ import Slider from "react-slick";
 import "./LogoCarousel.scss";
 
 const logos = [
-  "https://cirrussystemsus.com/wp-content/uploads/2023/01/Picture18-1-150x150.png",
-  "https://cirrussystemsus.com/wp-content/uploads/2023/01/Picture19-1-150x150.png",
-  "https://cirrussystemsus.com/wp-content/uploads/2023/01/Picture20-1-150x150.png",
-  "https://cirrussystemsus.com/wp-content/uploads/2023/01/Picture21-1-150x150.png",
-  "https://cirrussystemsus.com/wp-content/uploads/2023/01/Picture22-1-150x150.png",
-  "https://cirrussystemsus.com/wp-content/uploads/2023/01/Picture23-1-150x150.png",
+  "https://res.cloudinary.com/dz7nbmwai/image/upload/v1759293495/Picture20-1-150x150_1_rqdxbl.png",
+ "https://res.cloudinary.com/dz7nbmwai/image/upload/v1759293496/Picture22-1-150x150_1_f2gfs8.png",
+'https://res.cloudinary.com/dz7nbmwai/image/upload/v1759293496/Picture21-1-150x150_1_spv1yw.png',
 
+'https://res.cloudinary.com/dz7nbmwai/image/upload/v1759293496/Picture19-1-150x150_1_gibkbo.png',
+'https://res.cloudinary.com/dz7nbmwai/image/upload/v1759293496/Picture18-1-150x150_1_ajsfin.png',
+  'https://res.cloudinary.com/dz7nbmwai/image/upload/v1759293496/Picture23-1-150x150_1_s5czh7.png',
 
-  "https://cirrussystemsus.com/wp-content/uploads/2023/01/Picture18-1-150x150.png",
-  "https://cirrussystemsus.com/wp-content/uploads/2023/01/Picture19-1-150x150.png",
-  "https://cirrussystemsus.com/wp-content/uploads/2023/01/Picture20-1-150x150.png",
-  "https://cirrussystemsus.com/wp-content/uploads/2023/01/Picture21-1-150x150.png",
-  "https://cirrussystemsus.com/wp-content/uploads/2023/01/Picture22-1-150x150.png",
-  "https://cirrussystemsus.com/wp-content/uploads/2023/01/Picture23-1-150x150.png",
+  "https://res.cloudinary.com/dz7nbmwai/image/upload/v1759293495/Picture20-1-150x150_1_rqdxbl.png",
+ "https://res.cloudinary.com/dz7nbmwai/image/upload/v1759293496/Picture22-1-150x150_1_f2gfs8.png",
+'https://res.cloudinary.com/dz7nbmwai/image/upload/v1759293496/Picture21-1-150x150_1_spv1yw.png',
+
+'https://res.cloudinary.com/dz7nbmwai/image/upload/v1759293496/Picture19-1-150x150_1_gibkbo.png',
+'https://res.cloudinary.com/dz7nbmwai/image/upload/v1759293496/Picture18-1-150x150_1_ajsfin.png',
+  'https://res.cloudinary.com/dz7nbmwai/image/upload/v1759293496/Picture23-1-150x150_1_s5czh7.png',
 ];
 
 const LogoCarousel = () => {

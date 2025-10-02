@@ -25,7 +25,7 @@
         top: 0;
         height: 100%;
         width: 15px;
-        background: linear-gradient(to bottom, #8e2de2, #5d3dfd);
+        background: linear-gradient(to bottom, #332de2, #5d3dfd);
         border-radius: 4px;
       }
   
@@ -45,7 +45,7 @@
         display: block;
         font-size: 0.95rem;
         font-weight: 600;
-        color: #5d3dfd;
+        color: #2808c9;
         margin-bottom: 0.5rem;
       }
   
@@ -94,4 +94,18 @@
         margin-top: 0;
       }
     }
+  }.contact-hero {
+  
+
+    /* Blue overlay with blur */
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 15, 150, 0.433) !important; // blue overlay
+     
+   
+    }
+  
   }
+  

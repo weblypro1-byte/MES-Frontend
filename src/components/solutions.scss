@@ -1,17 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
+/* ====== GLOBAL RESET ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+}
+
 :root {
-  --purple-500: #6a0dad;
-  --purple-600: #5a0aa9;
+  --purple-500: #300dad;
+  --purple-600: #0a15a9;
   --bg-form: #f8f5fb;
   --text: #222;
   --container-width: 1200px;
 }
 
+/* ====== CONTACT PAGE ====== */
 .contact-page {
-  font-family: "Poppins", sans-serif;
-  color: var(--text);
   width: 100%;
+  overflow-x: clip; /* ✅ prevents overflow scroll without killing scroll color */
 
   /* HERO */
   .contact-hero {
@@ -23,6 +36,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+   
 
     &::after {
       content: "";
@@ -30,8 +44,8 @@
       inset: 0;
       background: linear-gradient(
         180deg,
-        rgba(70, 4, 82, 0.55),
-        rgba(50, 3, 59, 0.45)
+        rgba(9, 4, 82, 0.55),
+        rgba(8, 3, 59, 0.45)
       );
       z-index: 1;
     }
@@ -48,7 +62,6 @@
       .hero-title {
         font-size: 42px;
         font-weight: 700;
-        margin: 0;
       }
 
       .hero-breadcrumb {
@@ -70,22 +83,24 @@
       gap: 40px;
       max-width: var(--container-width);
       margin: 0 auto;
+      width: 100%; /* ✅ ensures no overflow */
     }
 
     .partners-info {
       flex: 1 1 60%;
+      min-width: 280px; /* ✅ prevents shrink issue */
 
       .intro-text {
         margin-bottom: 30px;
         p {
           margin-bottom: 15px;
           line-height: 1.6;
+        
         }
       }
 
       .logos-wrapper {
         text-align: center;
-
         img {
           max-width: 100%;
           height: auto;
@@ -99,6 +114,7 @@
     /* CONTACT FORM */
     .contact-form {
       flex: 1 1 35%;
+      min-width: 280px; /* ✅ prevents overflow on mobile */
       background: var(--bg-form);
       padding: 30px;
       border-radius: 10px;
@@ -117,6 +133,7 @@
         input,
         select,
         textarea {
+          width: 100%;
           padding: 12px;
           border: 1px solid #ddd;
           border-radius: 6px;
@@ -154,10 +171,43 @@
     }
   }
 
-  /* RESPONSIVE */
+  /* ====== RESPONSIVE ====== */
   @media (max-width: 992px) {
     .partners-section .container {
       flex-direction: column;
+      align-items: center;
+    }
+
+    .partners-info,
+    .contact-form {
+      flex: 1 1 100%;
+      max-width: 100%;
     }
   }
+
+  @media (max-width: 576px) {
+    .hero-inner .hero-title {
+      font-size: 28px;
+    }
+    .hero-inner .hero-breadcrumb {
+      font-size: 12px;
+    }
+    .contact-form {
+      padding: 20px;
+    }
+  }
+}
+.contact-hero {
+  
+
+  /* Blue overlay with blur */
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 15, 150, 0.433) !important; // blue overlay
+   
+ 
+  }
+
 }

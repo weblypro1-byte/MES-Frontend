@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Hero from "./Hero";
 import Services from './services';
 import ChannelPartners from '../Pages/ChannelPartners';
-import KeyDifferentiate from '../Pages/KeyDifferentiate';
+
 import ClientStories from '../Pages/ClientStories';
 import ProductsPage from '../Pages/ProductsPage';
 import Counter from '../Pages/Counter';
@@ -68,16 +68,7 @@ const Home = () => {
         <ClientStories />
       </motion.div>
 
-      {/* KEY DIFFERENTIATE */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={sectionVariant}
-      >
-        <KeyDifferentiate />
-      </motion.div>
-
+     
       {/* PRODUCTS */}
       <motion.div
         initial="hidden"

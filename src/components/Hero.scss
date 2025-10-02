@@ -119,10 +119,10 @@ $overlay-color: rgba(29, 23, 41, 0.7);
   
   .slide-overlay {
     background: linear-gradient(
-      90deg,
-      rgba(188, 188, 196, 0.798) 0%,    // royal blue
-      rgba(96, 45, 238, 0.704) 100%   // soft purple
-    );
+    90deg,
+    rgba(255, 255, 255, 0.515) 0%,   // deep blue
+    rgba(45, 42, 122, 0.85) 100%  // indigo
+  );
   }
   
 
@@ -449,7 +449,19 @@ $overlay-color: rgba(29, 23, 41, 0.7);
       padding: 14px 30px;
       font-size: 0.95rem;
       min-width: 140px;
+      
     }
+  }
+}
+
+.btn-primary {
+  background-color: #1a2fc8 !important;
+  border-color: #0f21a8 !important;
+  color: #fff !important;
+
+  &:hover {
+    background-color: darken(#0b1fb3, 10%) !important;
+    border-color: darken(#0922e2, 10%) !important;
   }
 }
 

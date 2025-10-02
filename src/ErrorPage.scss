@@ -1,0 +1,42 @@
+.error-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f8f9fa;
+    text-align: center;
+    color: #333;
+  
+    h1 {
+      font-size: 6rem;
+      font-weight: bold;
+      color: #2d3dee; // your theme color
+    }
+  
+    h2 {
+      margin-top: 10px;
+      font-size: 2rem;
+    }
+  
+    p {
+      margin: 15px 0;
+      font-size: 1.1rem;
+      color: #666;
+    }
+  
+    .back-home {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #372dee;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+  
+      &:hover {
+        background: #5451f9;
+      }
+    }
+  }
+  

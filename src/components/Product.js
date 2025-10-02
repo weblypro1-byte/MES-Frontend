@@ -1,11 +1,10 @@
 
 
 
-
 import React from "react";
 import "./Product.scss";
+import { message } from "antd"; // Add this import
 
-// 15 product images
 import card1 from "../assets/Products Card/card1.png";
 import card2 from "../assets/Products Card/card2.png";
 import card3 from "../assets/Products Card/card3.png";
@@ -40,37 +39,60 @@ const products = [
   { id: 15, title: "Big Data", image: card15, desc: "Uncover hidden trends and insights using advanced big data analytics tools and platforms." },
 ];
 
-const PartnersPage = () => {
-  // 🔹 Handle form submit
+const Product = () => {
+  // 🔹 Handle form submit - UPDATED WITH ANTD MESSAGE
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
     const formData = {
-      firstName: e.target[0].value,
-      lastName: e.target[1].value,
-      organization: e.target[2].value,
-      orgSize: e.target[3].value,
-      email: e.target[4].value,
-      phone: e.target[5].value,
-      message: e.target[6].value,
+      firstName: e.target.firstName.value,
+      lastName: e.target.lastName.value,
+      organization: e.target.organization.value,
+      orgSize: e.target.orgSize.value,
+      email: e.target.email.value,
+      phone: e.target.phone.value,
+      message: e.target.message.value,
     };
 
     try {
-      const res = await fetch("http://localhost:5000/api/form2", {
+      const res = await fetch("http://localhost:5001/api/product", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
       const data = await res.json();
+      
       if (data.success) {
-        alert("✅ Form submitted successfully!");
+        message.success({
+          content: 'Form submitted successfully! Our expert will contact you soon.',
+          duration: 5,
+          style: { 
+            marginTop: '20vh',
+            textAlign: 'center'
+          }
+        });
         e.target.reset();
       } else {
-        alert("❌ Failed: " + data.message);
+        message.error({
+          content: `${data.message || 'Submission failed, please try again.'}`,
+          duration: 5,
+          style: { 
+            marginTop: '20vh',
+            textAlign: 'center'
+          }
+        });
       }
     } catch (err) {
-      console.error(err);
-      alert("❌ Something went wrong.");
+      console.error("Error:", err);
+      message.error({
+        content: 'Network error. Please check your connection and try again.',
+        duration: 5,
+        style: { 
+          marginTop: '20vh',
+          textAlign: 'center'
+        }
+      });
     }
   };
 
@@ -78,11 +100,14 @@ const PartnersPage = () => {
     <div className="partners-page">
       {/* HERO */}
       <header
-        className="partners-hero"
-        style={{ backgroundImage: `url(${"https://res.cloudinary.com/dz7nbmwai/image/upload/v1758696077/Hero_t6sv76.webp"})` }}
+        className="contact-hero"
+        style={{
+          backgroundImage: `url("https://res.cloudinary.com/dz7nbmwai/image/upload/v1758696077/Hero_t6sv76.webp")`,
+        }}
+        role="banner"
       >
         <div className="hero-inner">
-          <h1 className="hero-title">Products & Services</h1>
+          <h1 className="hero-title">PRODUCTS & SERVICES</h1>
          
         </div>
       </header>
@@ -92,21 +117,19 @@ const PartnersPage = () => {
         <div className="container">
           <h2 className="section-heading">Solutions and Products</h2>
           <h3 className="section-subheading">
-          See how MES can help meet your Agency’s needs today 
+            See how MES can help meet your Agency's needs today 
           </h3>
 
           <div className="cards-grid">
             {products.map((p) => (
               <div key={p.id} className="flip-card">
                 <div className="flip-card-inner">
-                  {/* FRONT */}
                   <div className="flip-card-front">
                     <h3 className="card-heading">{p.title}</h3>
                     <div className="card-image">
                       <img src={p.image} alt={p.title} />
                     </div>
                   </div>
-                  {/* BACK */}
                   <div className="flip-card-back">
                     <h3 className="card-heading">{p.title}</h3>
                     <p>{p.desc}</p>
@@ -118,7 +141,7 @@ const PartnersPage = () => {
 
           {/* DOWNLOAD LINE */}
           <div className="download-section">
-            <p>See how MES can help meet your Agency’s needs today </p>
+            <p>See how MES can help meet your Agency's needs today </p>
             <a
               href="/File/References.pdf"
               download="References.pdf"
@@ -127,34 +150,34 @@ const PartnersPage = () => {
               <img
                 src="https://cdn-icons-png.flaticon.com/512/724/724933.png"
                 alt="References"
-                style={{ width: "24px", marginRight: "8px" }}
+                style={{ width: "24px", marginRight: "8px",    filter: "invert(34%) sepia(96%) saturate(3843%) hue-rotate(190deg)  contrast(90%)"
+                }}
               />
               Download
             </a>
           </div>
 
-          {/* CONTACT FORM */}
+          {/* CONTACT FORM - FIXED */}
           <div className="contact-form">
             <h3>Talk to MES Expert</h3>
             <form onSubmit={handleSubmit}>
               <div className="form-row">
-                <input type="text" placeholder="First name *" required />
-                <input type="text" placeholder="Last name *" required />
+                <input type="text" name="firstName" placeholder="First name *" required />
+                <input type="text" name="lastName" placeholder="Last name *" required />
               </div>
-              <input type="text" placeholder="Organization *" required />
+              <input type="text" name="organization" placeholder="Organization *" required />
               <div className="form-row">
-                <select required>
+                <select name="orgSize" required>
                   <option value="">Org size *</option>
                   <option value="1-10">1-10</option>
                   <option value="11-50">11-50</option>
                   <option value="51-200">51-200</option>
                   <option value="200+">200+</option>
                 </select>
-                <input type="email" placeholder="Business email *" required />
+                <input type="email" name="email" placeholder="Business email *" required />
               </div>
-              <input type="tel" placeholder="Phone number *" required />
-              <textarea placeholder="Type your message here *" required />
-
+              <input type="tel" name="phone" placeholder="Phone number *" required />
+              <textarea name="message" placeholder="Type your message here *" required />
               <button type="submit">Submit</button>
             </form>
           </div>
@@ -164,4 +187,4 @@ const PartnersPage = () => {
   );
 };
 
-export default PartnersPage;
+export default Product;

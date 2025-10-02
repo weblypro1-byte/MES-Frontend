@@ -1,7 +1,7 @@
 
 import React from 'react';
 import "./OurMission.scss"
-import Image from '../assets/HomeImage/MISSIONS.png'
+
 const OurMissions = () => {
   return (
     <div className="about-page">
@@ -12,7 +12,7 @@ const OurMissions = () => {
            
 <div className="left-section">
   <img 
-    src={Image}
+    src="https://res.cloudinary.com/dz7nbmwai/image/upload/v1759331094/MISSIONS_acq5om.png"
     alt="About Us" 
     className="about-image"
   />

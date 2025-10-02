@@ -12,10 +12,10 @@ export default function CompanyHistory() {
     role="banner"
   >
     <div className="hero-inner">
-      <h1 className="hero-title">About us</h1>
-      <nav className="hero-breadcrumb" aria-label="Breadcrumb">
+      <h1 className="hero-title">ABOUT US</h1>
+      {/* <nav className="hero-breadcrumb" aria-label="Breadcrumb">
         HOME <span className="sep">›</span> About us
-      </nav>
+      </nav> */}
     </div>
   </header>
 
@@ -24,7 +24,7 @@ export default function CompanyHistory() {
         {/* Left Image */}
         <div className="image-content">
           <img
-            src="https://cirrussystemsus.com/wp-content/uploads/2022/03/left-about-company-aboutUs.jpg" 
+            src="https://res.cloudinary.com/dz7nbmwai/image/upload/v1759330033/depositphotos_27554211-stock-photo-two-businesswomen-meeting-in-office_yfsrko.webp" 
             alt="Company History"
           />
         </div>

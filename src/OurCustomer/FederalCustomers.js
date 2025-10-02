@@ -42,7 +42,7 @@ export default function FederalCustomers() {
     role="banner"
   >
     <div className="hero-inner">
-      <h1 className="hero-title">Our Customers</h1>
+      <h1 className="hero-title">OUR CUSTOMER</h1>
       
     </div>
   </header>

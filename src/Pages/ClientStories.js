@@ -9,7 +9,7 @@ const ClientStoriesPage = () => {
         <div className="story-card">
           <div className="image-wrapper">
             <img
-              src="https://images.pexels.com/photos/1181352/pexels-photo-1181352.jpeg"
+              src="https://res.cloudinary.com/dz7nbmwai/image/upload/v1759332282/pexels-photo-1181352_fsfnls.jpg"
               alt="IT Solutions"
             />
             <div className="overlay"></div>
@@ -26,7 +26,7 @@ const ClientStoriesPage = () => {
         <div className="story-card">
           <div className="image-wrapper">
             <img
-              src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg"
+              src="https://res.cloudinary.com/dz7nbmwai/image/upload/v1759332296/pexels-photo-3184418_f9xslk.jpg"
               alt="Happy Clients"
             />
             <div className="overlay"></div>

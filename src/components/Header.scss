@@ -1,6 +1,6 @@
 
 /* Variables */
-$primary-color: #5F2DEE;
+$primary-color: #1222a2;
 $secondary-color: #0e0cad;
 $text-color: #6C6A72;
 $heading-color: #1D1729;
@@ -26,7 +26,7 @@ $light-text: #B0A9C0;
 /* Top Info Bar */
 .top-info-bar {
 
-    background: $primary-color;
+    background:#0452ac;
     color: $white;
     font-size: 14px;
     padding: 4px 0;
@@ -451,15 +451,15 @@ $light-text: #B0A9C0;
     text-decoration: none;
     transition: color 0.3s ease;
 
-    &:hover { color: #8a2be2; }
+    &:hover { color: #432be2; }
   }
 
   .sub-menu {
     position: absolute;
     top: 100%;
     left: 0;
-    background: #f8f4ff;
-    border: 1px solid #d9c8ff;
+    background: #f4f4ff;
+    border: 1px solid #c8cdff;
     border-radius: 8px;
     padding: 10px 0;
     min-width: 200px;
@@ -480,7 +480,7 @@ $light-text: #B0A9C0;
       transition: all 0.2s ease;
 
       &:hover {
-        background: linear-gradient(90deg, #740ad700 0%, #6a0dad 100%);
+        background: linear-gradient(90deg, #740ad700 0%, #0d25ad 100%);
         color: #fff;
         padding-left: 20px;
       }
@@ -494,25 +494,6 @@ $light-text: #B0A9C0;
   }
 }
 
-// @media (max-width: 768px) {
-//   .menu-item-has-children .sub-menu {
-//     position: static;
-//     opacity: 1;
-//     visibility: visible;
-//     transform: none;
-//     box-shadow: none;
-//     border: none;
-//     border-radius: 0;
-//     background: transparent;
-//     padding: 0;
-
-//     li a {
-//       padding: 12px 16px;
-//       border-bottom: 1px solid #eee;
-//     }
-//   }
-// }
-
 /* For mobile screens */
 @media (max-width: 767px) {
   /* Center email in top bar */
@@ -524,4 +505,19 @@ $light-text: #B0A9C0;
       justify-content: center; /* override flex-end */
     }
   }
-}  
+}  .main-header.scrolled {
+  background-color: $white !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15) !important;
+
+  .main-navigation ul.menu > li > a {
+    color: $heading-color !important;
+  }
+
+  .header-actions .phone-action .contact-details a {
+    color: $heading-color !important;
+  }
+
+  .mobile-menu-toggle button span {
+    background: $heading-color !important;
+  }
+}
