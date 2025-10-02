@@ -1,5 +1,535 @@
 
-/* Variables */
+// /* Variables */
+// $primary-color: #1222a2;
+// $secondary-color: #0e0cad;
+// $text-color: #6C6A72;
+// $heading-color: #1D1729;
+// $light-color: #E4E0EE;
+// $background-color: #F4F2F9;
+// $white: #FFFFFF;
+// $dark-bg: #1D1729;
+// $light-text: #B0A9C0;
+
+// /* Mixins */
+// @mixin transition($property: all, $duration: 0.3s, $easing: ease) {
+//   transition: $property $duration $easing;
+// }
+// @mixin flex-center {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+// // topbar
+
+
+
+// /* Top Info Bar */
+// .top-info-bar {
+
+//     background:#0452ac;
+//     color: $white;
+//     font-size: 14px;
+//     padding: 4px 0;
+//     border-bottom: 1px solid rgba(255, 255, 255, 0.2); // thin line
+//     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); // soft shadow
+
+
+  
+//   .container {
+//     max-width: 1200px;
+//     margin: 0 auto;
+//     padding: 0 15px;
+//   }
+
+//   .top-info-content {
+//     display: flex;
+//     justify-content: flex-end;
+//     align-items: center;
+//     gap: 30px;
+//     padding: 5px;
+
+//     .contact-item {
+//       display: flex;
+//       align-items: center;
+//       gap: 6px;
+
+//       img {
+//         width: 16px;
+//         height: 16px;
+//         // filter: brightness(0) invert(1); // make icons white
+//       }
+
+//       a {
+//         color: $white;
+//         text-decoration: none;
+//         font-weight: 500;
+//         transition: color 0.3s ease;
+        
+
+//         &:hover {
+//           color: $secondary-color;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// /* Hide topbar on mobile */
+// @media (max-width: 767px) {
+//   .top-info-bar {
+//     display: none;
+//   }
+// }
+
+
+
+
+// /* --- Replace existing .main-header block with this --- */
+// .main-header {
+//   position: sticky;
+//   top: 0;
+//   width: 100%;
+//   z-index: 1000;
+//   padding: 12px 0;
+//   transition: background 0.25s ease, padding 0.25s ease, box-shadow 0.25s ease;
+//   isolation: isolate;
+
+//   /* default: transparent (we will toggle classes) */
+//   background: transparent;
+//   box-shadow: none;
+
+//   &.transparent {
+//     background: transparent;
+//     box-shadow: none;
+
+//     /* links & phone white on transparent header */
+//     .main-navigation ul.menu > li > a { color: $white !important; }
+//     .header-actions .phone-action .contact-details a { color: $white !important; }
+//     .mobile-menu-toggle button span { background: $white !important; }
+//   }
+
+//   &.scrolled {
+//     background: $white;
+//     box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+//     padding: 8px 0;
+
+//     /* links & phone dark on scrolled/header-on-other-pages */
+//     .main-navigation ul.menu > li > a { color: $heading-color !important; }
+//     .header-actions .phone-action .contact-details a { color: $heading-color !important; }
+//     .mobile-menu-toggle button span { background: $heading-color !important; }
+//   }
+
+//   /* make inner link styles use inherit so header classes control color */
+//   .main-navigation ul.menu > li > a {
+//     color: inherit;
+//     text-decoration: none;
+//     padding: 8px 12px;
+//     font-size: 14px;
+//     font-weight: 600;
+//     display: block;
+//     border-radius: 3px;
+//     @include transition(all, 0.3s);
+//   }
+
+//   .header-actions .phone-action .contact-details a {
+//     color: inherit;
+//     font-weight: 600;
+//     text-decoration: none;
+//     font-size: 15px;
+//     @include transition(color, 0.3s);
+//   }
+
+//   /* mobile toggle bars */
+//   .mobile-menu-toggle button span {
+//     display: block;
+//     height: 3px;
+//     width: 25px;
+//     border-radius: 2px;
+//     @include transition(all, 0.25s);
+//   }
+
+    
+//   /* Ensure the header doesn't create a new stacking context */
+//   isolation: isolate; /* This prevents the header from blocking the hero */
+
+//  // adjust (5–15px) until it looks perfect
+
+//   .container {
+//     max-width: 1200px;
+//     margin: 0 auto;
+//     background: transparent; // make sure inner wrapper doesn't override
+//     padding: 0 15px;
+//   }
+
+//   .header-content {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//   }
+
+//   .brand-logo {
+//     display: flex;
+//     align-items: center;
+
+//     a { display: inline-block; }
+
+//     .logo {
+//       height: 50px;
+//       width: auto;
+
+//       object-fit: contain;
+//       display: block;
+//       //
+//   //     background: rgba(255, 255, 255, 0.8); // light bg
+//   // padding: 6px;
+//   // border-radius: 8px;
+
+//     }
+//   }
+
+//   /* Navigation */
+//   .main-navigation ul.menu {
+//     display: flex;
+//     list-style: none;
+//     padding: 0;
+//     margin: 0;
+//     gap: 5px;
+
+//     > li {
+//       position: relative;
+
+//       > a {
+//         color: $white; // White on transparent bg
+    
+//         text-decoration: none;
+//         padding: 8px 12px;
+//         font-size: 14px;
+//         font-weight: 600;
+//         display: block;
+//         border-radius: 3px;
+//         @include transition(all, 0.3s);
+
+//         &:hover { 
+//           color: $secondary-color; 
+//           background-color: rgba($white, 0.05); 
+//         }
+//       }
+
+//       &.current-menu-item > a { color: $secondary-color; }
+
+//       &:hover .sub-menu { 
+//         opacity: 1; 
+//         visibility: visible; 
+//         transform: translateY(0); 
+//       }
+//     }
+//   }
+
+//   /* Header Actions */
+//   .header-actions {
+//     display: flex;
+//     align-items: center;
+//     gap: 15px;
+
+//     .phone-action .contact-info-item.phone-circle {
+//       @include flex-center;
+//       gap: 8px;
+
+//       .icon-circle {
+//         width: 46px;
+//         height: 46px;
+//         background: linear-gradient(135deg, $primary-color, $secondary-color);
+//         border-radius: 50%;
+//         @include flex-center;
+//         box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+
+//         img {
+//           width: 22px;
+//           height: 22px;
+//           object-fit: contain;
+//           filter: brightness(0) invert(1); // force white
+//         }
+//       }
+
+//       .contact-details a {
+//         color: $white; // default (transparent header)
+//         font-weight: 600;
+//         text-decoration: none;
+//         font-size: 15px;
+//         @include transition(color, 0.3s);
+
+//         &:hover { color: $secondary-color; }
+//       }
+//     }
+//   }
+
+//   /* Scrolled state */
+//   &.scrolled {
+//     background-color: $white!important;
+//     box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+//     padding: 8px 0;
+
+//     /* Dark navigation links */
+//     .main-navigation ul.menu > li > a {
+//       color: $heading-color;
+//       &:hover { 
+//         color: $secondary-color; 
+//         background-color: rgba($dark-bg, 0.05);
+//       }
+//     }
+
+//     /* Phone text */
+//     .header-actions .phone-action .contact-details a {
+//       color: $heading-color !important; // force dark when scrolled
+//       &:hover { color: $secondary-color; }
+//     }
+
+//     /* Keep purple gradient icon */
+//     .header-actions .phone-action .icon-circle {
+//       background: linear-gradient(135deg, $primary-color, $secondary-color);
+//     }
+//   }
+// }
+
+// /* Submenu */
+// .sub-menu {
+//   position: absolute;
+//   background: $white;
+//   min-width: 180px;
+//   box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+//   opacity: 0;
+//   visibility: hidden;
+//   transform: translateY(8px);
+//   border-radius: 4px;
+//   overflow: hidden;
+//   list-style: none;
+//   padding: 8px 0;
+//   margin: 0;
+//   @include transition(all, 0.3s);
+
+//   li a {
+//     color: $heading-color;
+//     padding: 8px 16px;
+//     display: block;
+//     font-size: 13px;
+//     text-decoration: none;
+//     &:hover { 
+//       background-color: $secondary-color; 
+//       color: $white; 
+//     }
+//   }
+// }
+
+// /* Mobile Menu Toggle */
+// .mobile-menu-toggle {
+//   display: none;
+
+//   button.menu-toggle {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 5px;
+//     background: none;
+//     border: none;
+//     cursor: pointer;
+    
+//     span {
+//       display: block;
+//       height: 3px;
+//       width: 25px;
+//       background: $white;
+//       border-radius: 2px;
+//       @include transition(all, 0.3s);
+
+//       /* Change to dark when scrolled */
+//       .main-header.scrolled & {
+//         background: $heading-color;
+//       }
+//     }
+//   }
+// }
+
+// /* Mobile Menu Overlay */
+// .mobile-menu-overlay {
+//   position: fixed; 
+//   top: 0; 
+//   left: 0; 
+//   width: 100%; 
+//   height: 100%;
+//   background: rgba(0,0,0,0.7); 
+//   z-index: 1000;
+//   opacity: 0; 
+//   visibility: hidden; 
+//   @include transition(all, 0.3s);
+
+//   &.active { 
+//     opacity: 1; 
+//     visibility: visible; 
+//   }
+// }
+
+// /* Mobile Menu */
+// .mobile-menu {
+//   position: fixed; 
+//   top: 0; 
+//   left: 0; 
+//   width: 80%; 
+//   max-width: 300px;
+//   height: 100%; 
+//   background: $white;
+//   z-index: 1001;
+//   padding: 20px; 
+//   overflow-y: auto;
+//   transform: translateX(-100%);
+//   @include transition(transform, 0.4s, ease-in-out);
+
+//   &.active { transform: translateX(0); }
+
+//   .mobile-menu-header {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     margin-bottom: 20px;
+    
+//     .close-menu {
+//       background: none;
+//       border: none;
+//       font-size: 24px;
+//       cursor: pointer;
+//       color: $heading-color;
+//     }
+//   }
+
+//   ul.menu {
+//     list-style: none;
+//     padding: 0;
+//     margin: 0;
+    
+//     li a {
+//       display: block;
+//       padding: 12px 0;
+//       color: $heading-color;
+//       font-weight: 500;
+//       text-decoration: none;
+//       &:hover { color: $secondary-color; }
+//     }
+
+//     .sub-menu {
+//       position: static;
+//       opacity: 1;
+//       visibility: visible;
+//       transform: none;
+//       box-shadow: none;
+//       padding-left: 15px;
+//       margin: 5px 0;
+      
+//       li a { font-size: 14px; padding: 8px 0; }
+//     }
+//   }
+// }
+
+// /* Responsive */
+// @media (max-width: 1024px) {
+//   .main-navigation { display: none; }
+//   .mobile-menu-toggle { display: block; }
+// }
+
+// @media (max-width: 767px) {
+//   .top-info-bar { display: none; }
+//   .header-actions .phone-action { display: none; }
+// }
+
+// /* Unique Dropdown Styling */
+// .menu-item-has-children {
+//   position: relative;
+
+//   > a {
+//     display: inline-block;
+//     padding: 10px 16px;
+//     font-size: 15px;
+//     font-weight: 600;
+//     color: #222;
+//     text-decoration: none;
+//     transition: color 0.3s ease;
+
+//     &:hover { color: #432be2; }
+//   }
+
+//   .sub-menu {
+//     position: absolute;
+//     top: 100%;
+//     left: 0;
+//     background: #f4f4ff;
+//     border: 1px solid #c8cdff;
+//     border-radius: 8px;
+//     padding: 10px 0;
+//     min-width: 200px;
+//     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+//     opacity: 0;
+//     visibility: hidden;
+//     transform: translateY(10px);
+//     transition: all 0.25s ease-in-out;
+//     z-index: 999;
+
+//     li a {
+//       display: block;
+//       padding: 10px 16px;
+//       font-size: 14px;
+//       font-weight: 500;
+//       color: #333;
+//       text-decoration: none;
+//       transition: all 0.2s ease;
+
+//       &:hover {
+//         background: linear-gradient(90deg, #740ad700 0%, #0d25ad 100%);
+//         color: #fff;
+//         padding-left: 20px;
+//       }
+//     }
+
+//     &.open {
+//       opacity: 1;
+//       visibility: visible;
+//       transform: translateY(0);
+//     }
+//   }
+// }
+
+// /* For mobile screens */
+// @media (max-width: 767px) {
+//   /* Center email in top bar */
+//   .top-info-bar {
+//     display: block; /* keep it visible */
+//     text-align: center;
+
+//     .top-info-content {
+//       justify-content: center; /* override flex-end */
+//     }
+//   }
+// }  .main-header.scrolled {
+//   background-color: $white !important;
+//   box-shadow: 0 2px 10px rgba(0,0,0,0.15) !important;
+
+//   .main-navigation ul.menu > li > a {
+//     color: $heading-color !important;
+//   }
+
+//   .header-actions .phone-action .contact-details a {
+//     color: $heading-color !important;
+//   }
+
+//   .mobile-menu-toggle button span {
+//     background: $heading-color !important;
+//   }
+// }
+
+
+
+
+
+
+
+
+///* ---------------- VARIABLES ---------------- */
 $primary-color: #1222a2;
 $secondary-color: #0e0cad;
 $text-color: #6C6A72;
@@ -7,10 +537,8 @@ $heading-color: #1D1729;
 $light-color: #E4E0EE;
 $background-color: #F4F2F9;
 $white: #FFFFFF;
-$dark-bg: #1D1729;
-$light-text: #B0A9C0;
 
-/* Mixins */
+/* ---------------- MIXINS ---------------- */
 @mixin transition($property: all, $duration: 0.3s, $easing: ease) {
   transition: $property $duration $easing;
 }
@@ -19,145 +547,38 @@ $light-text: #B0A9C0;
   align-items: center;
   justify-content: center;
 }
-// topbar
 
-
-
-/* Top Info Bar */
-.top-info-bar {
-
-    background:#0452ac;
-    color: $white;
-    font-size: 14px;
-    padding: 4px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); // thin line
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); // soft shadow
-
-
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-
-  .top-info-content {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 30px;
-    padding: 5px;
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-
-      img {
-        width: 16px;
-        height: 16px;
-        // filter: brightness(0) invert(1); // make icons white
-      }
-
-      a {
-        color: $white;
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s ease;
-        
-
-        &:hover {
-          color: $secondary-color;
-        }
-      }
-    }
-  }
-}
-
-/* Hide topbar on mobile */
-@media (max-width: 767px) {
-  .top-info-bar {
-    display: none;
-  }
-}
-
-
-
-
-/* --- Replace existing .main-header block with this --- */
+/* ---------------- HEADER ---------------- */
 .main-header {
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
-  padding: 12px 0;
-  transition: background 0.25s ease, padding 0.25s ease, box-shadow 0.25s ease;
-  isolation: isolate;
-
-  /* default: transparent (we will toggle classes) */
+  padding: 14px 0;
   background: transparent;
   box-shadow: none;
+  @include transition(all, 0.25s);
 
   &.transparent {
     background: transparent;
-    box-shadow: none;
-
-    /* links & phone white on transparent header */
-    .main-navigation ul.menu > li > a { color: $white !important; }
-    .header-actions .phone-action .contact-details a { color: $white !important; }
-    .mobile-menu-toggle button span { background: $white !important; }
+    .main-navigation ul.menu > li > a { color: $white; }
+    .menu-toggle span { background: $white; }
+    .contact-info-item a { color: $white; }
   }
 
   &.scrolled {
     background: $white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.12);
-    padding: 8px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    padding: 10px 0;
 
-    /* links & phone dark on scrolled/header-on-other-pages */
-    .main-navigation ul.menu > li > a { color: $heading-color !important; }
-    .header-actions .phone-action .contact-details a { color: $heading-color !important; }
-    .mobile-menu-toggle button span { background: $heading-color !important; }
+    .main-navigation ul.menu > li > a { color: $heading-color; }
+    .menu-toggle span { background: $heading-color; }
+    .contact-info-item a { color: black!important; }
   }
-
-  /* make inner link styles use inherit so header classes control color */
-  .main-navigation ul.menu > li > a {
-    color: inherit;
-    text-decoration: none;
-    padding: 8px 12px;
-    font-size: 14px;
-    font-weight: 600;
-    display: block;
-    border-radius: 3px;
-    @include transition(all, 0.3s);
-  }
-
-  .header-actions .phone-action .contact-details a {
-    color: inherit;
-    font-weight: 600;
-    text-decoration: none;
-    font-size: 15px;
-    @include transition(color, 0.3s);
-  }
-
-  /* mobile toggle bars */
-  .mobile-menu-toggle button span {
-    display: block;
-    height: 3px;
-    width: 25px;
-    border-radius: 2px;
-    @include transition(all, 0.25s);
-  }
-
-    
-  /* Ensure the header doesn't create a new stacking context */
-  isolation: isolate; /* This prevents the header from blocking the hero */
-
- // adjust (5–15px) until it looks perfect
 
   .container {
     max-width: 1200px;
     margin: 0 auto;
-    background: transparent; // make sure inner wrapper doesn't override
     padding: 0 15px;
   }
 
@@ -167,326 +588,100 @@ $light-text: #B0A9C0;
     justify-content: space-between;
   }
 
-  .brand-logo {
-    display: flex;
-    align-items: center;
-
-    a { display: inline-block; }
-
-    .logo {
-      height: 50px;
-      width: auto;
-
-      object-fit: contain;
-      display: block;
-      //
-  //     background: rgba(255, 255, 255, 0.8); // light bg
-  // padding: 6px;
-  // border-radius: 8px;
-
-    }
+  .brand-logo .logo {
+    height: 70px;
+    width: auto;
   }
 
-  /* Navigation */
-  .main-navigation ul.menu {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 5px;
-
-    > li {
-      position: relative;
-
-      > a {
-        color: $white; // White on transparent bg
-    
-        text-decoration: none;
-        padding: 8px 12px;
-        font-size: 14px;
-        font-weight: 600;
-        display: block;
-        border-radius: 3px;
-        @include transition(all, 0.3s);
-
-        &:hover { 
-          color: $secondary-color; 
-          background-color: rgba($white, 0.05); 
-        }
-      }
-
-      &.current-menu-item > a { color: $secondary-color; }
-
-      &:hover .sub-menu { 
-        opacity: 1; 
-        visibility: visible; 
-        transform: translateY(0); 
-      }
-    }
-  }
-
-  /* Header Actions */
-  .header-actions {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-
-    .phone-action .contact-info-item.phone-circle {
-      @include flex-center;
-      gap: 8px;
-
-      .icon-circle {
-        width: 46px;
-        height: 46px;
-        background: linear-gradient(135deg, $primary-color, $secondary-color);
-        border-radius: 50%;
-        @include flex-center;
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-
-        img {
-          width: 22px;
-          height: 22px;
-          object-fit: contain;
-          filter: brightness(0) invert(1); // force white
-        }
-      }
-
-      .contact-details a {
-        color: $white; // default (transparent header)
-        font-weight: 600;
-        text-decoration: none;
-        font-size: 15px;
-        @include transition(color, 0.3s);
-
-        &:hover { color: $secondary-color; }
-      }
-    }
-  }
-
-  /* Scrolled state */
-  &.scrolled {
-    background-color: $white!important;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-    padding: 8px 0;
-
-    /* Dark navigation links */
-    .main-navigation ul.menu > li > a {
-      color: $heading-color;
-      &:hover { 
-        color: $secondary-color; 
-        background-color: rgba($dark-bg, 0.05);
-      }
-    }
-
-    /* Phone text */
-    .header-actions .phone-action .contact-details a {
-      color: $heading-color !important; // force dark when scrolled
-      &:hover { color: $secondary-color; }
-    }
-
-    /* Keep purple gradient icon */
-    .header-actions .phone-action .icon-circle {
-      background: linear-gradient(135deg, $primary-color, $secondary-color);
-    }
+// ✅ Tablet screens
+@media (max-width: 1024px) {
+  .brand-logo .logo {
+    height: 55px;
   }
 }
 
-/* Submenu */
-.sub-menu {
-  position: absolute;
-  background: $white;
-  min-width: 180px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(8px);
-  border-radius: 4px;
-  overflow: hidden;
+// ✅ Mobile screens
+@media (max-width: 768px) {
+  .brand-logo .logo {
+    height: 45px;
+  }
+}
+
+// ✅ Extra small screens
+@media (max-width: 480px) {
+  .brand-logo .logo {
+    height: 35px;
+  }
+}
+}
+
+/* ---------------- DESKTOP NAV ---------------- */
+.main-navigation ul.menu {
+  display: flex;
+  gap: 25px;
   list-style: none;
-  padding: 8px 0;
   margin: 0;
-  @include transition(all, 0.3s);
+  padding: 0;
 
-  li a {
-    color: $heading-color;
-    padding: 8px 16px;
-    display: block;
-    font-size: 13px;
-    text-decoration: none;
-    &:hover { 
-      background-color: $secondary-color; 
-      color: $white; 
-    }
-  }
-}
+  > li {
+    position: relative;
 
-/* Mobile Menu Toggle */
-.mobile-menu-toggle {
-  display: none;
-
-  button.menu-toggle {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    
-    span {
-      display: block;
-      height: 3px;
-      width: 25px;
-      background: $white;
-      border-radius: 2px;
-      @include transition(all, 0.3s);
-
-      /* Change to dark when scrolled */
-      .main-header.scrolled & {
-        background: $heading-color;
-      }
-    }
-  }
-}
-
-/* Mobile Menu Overlay */
-.mobile-menu-overlay {
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: 100%;
-  background: rgba(0,0,0,0.7); 
-  z-index: 1000;
-  opacity: 0; 
-  visibility: hidden; 
-  @include transition(all, 0.3s);
-
-  &.active { 
-    opacity: 1; 
-    visibility: visible; 
-  }
-}
-
-/* Mobile Menu */
-.mobile-menu {
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  width: 80%; 
-  max-width: 300px;
-  height: 100%; 
-  background: $white;
-  z-index: 1001;
-  padding: 20px; 
-  overflow-y: auto;
-  transform: translateX(-100%);
-  @include transition(transform, 0.4s, ease-in-out);
-
-  &.active { transform: translateX(0); }
-
-  .mobile-menu-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    
-    .close-menu {
-      background: none;
-      border: none;
-      font-size: 24px;
-      cursor: pointer;
-      color: $heading-color;
-    }
-  }
-
-  ul.menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    
-    li a {
-      display: block;
-      padding: 12px 0;
-      color: $heading-color;
-      font-weight: 500;
+    > a {
+      font-size: 15px;
+      font-weight: 600;
       text-decoration: none;
-      &:hover { color: $secondary-color; }
-    }
+      padding: 8px 10px;
+      color: $white;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      @include transition(color);
+
+     
+  &::after {
+    content: attr(data-arrow);
+    font-size: 10px;
+    margin-left: 3px;
+  }
+
+  &:hover {
+    color: $secondary-color !important;
+  }
+}
+
+// ✅ when header is scrolled, re-apply hover
+.main-header.scrolled .main-navigation ul.menu > li > a {
+  color: $heading-color;
+
+  &:hover {
+    color: $secondary-color !important;
+  }
+}
 
     .sub-menu {
-      position: static;
-      opacity: 1;
-      visibility: visible;
-      transform: none;
-      box-shadow: none;
-      padding-left: 15px;
-      margin: 5px 0;
-      
-      li a { font-size: 14px; padding: 8px 0; }
-    }
-  }
-}
+      position: absolute;
+      background: $white;
+      min-width: 180px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      border-radius: 4px;
+      padding: 8px 0;
+      list-style: none;
+      @include transition(all);
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .main-navigation { display: none; }
-  .mobile-menu-toggle { display: block; }
-}
-
-@media (max-width: 767px) {
-  .top-info-bar { display: none; }
-  .header-actions .phone-action { display: none; }
-}
-
-/* Unique Dropdown Styling */
-.menu-item-has-children {
-  position: relative;
-
-  > a {
-    display: inline-block;
-    padding: 10px 16px;
-    font-size: 15px;
-    font-weight: 600;
-    color: #222;
-    text-decoration: none;
-    transition: color 0.3s ease;
-
-    &:hover { color: #432be2; }
-  }
-
-  .sub-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #f4f4ff;
-    border: 1px solid #c8cdff;
-    border-radius: 8px;
-    padding: 10px 0;
-    min-width: 200px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.25s ease-in-out;
-    z-index: 999;
-
-    li a {
-      display: block;
-      padding: 10px 16px;
-      font-size: 14px;
-      font-weight: 500;
-      color: #333;
-      text-decoration: none;
-      transition: all 0.2s ease;
-
-      &:hover {
-        background: linear-gradient(90deg, #740ad700 0%, #0d25ad 100%);
-        color: #fff;
-        padding-left: 20px;
+      li a {
+        color: $heading-color;
+        font-size: 13px;
+        font-weight: 500;
+        display: block;
+        padding: 8px 16px;
+        &:hover { background: $secondary-color; color: $white; }
       }
     }
 
-    &.open {
+    &:hover .sub-menu {
       opacity: 1;
       visibility: visible;
       transform: translateY(0);
@@ -494,30 +689,180 @@ $light-text: #B0A9C0;
   }
 }
 
-/* For mobile screens */
-@media (max-width: 767px) {
-  /* Center email in top bar */
-  .top-info-bar {
-    display: block; /* keep it visible */
-    text-align: center;
+/* ---------------- HEADER ACTIONS ---------------- */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 
-    .top-info-content {
-      justify-content: center; /* override flex-end */
+  .contact-info-group {
+    display: flex;
+    gap: 50px;
+
+    .contact-info-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      .icon-circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, $primary-color, $secondary-color);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+
+        img {
+          width: 18px;
+          height: 18px;
+          filter: brightness(0) invert(1); // white icon
+        }
+      }
+
+      .contact-details a {
+        font-size: 15px;
+        font-weight: 700;
+        text-decoration: none;
+        color: $white;
+        @include transition(color);
+
+        &:hover { color: $secondary-color; }
+      }
     }
   }
-}  .main-header.scrolled {
-  background-color: $white !important;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.15) !important;
+}
 
-  .main-navigation ul.menu > li > a {
-    color: $heading-color !important;
+/* ---------------- MOBILE ---------------- */
+.mobile-menu-toggle {
+  display: none;
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    span {
+      height: 3px;
+      width: 24px;
+      border-radius: 2px;
+      background: $white;
+      @include transition(all);
+    }
+
+    &.active span:nth-child(2) { opacity: 0; }
+    &.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    &.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+  }
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  @include transition(all);
+
+  &.active { opacity: 1; visibility: visible; }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: $white;
+  z-index: 1001;
+  padding: 20px;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  @include transition(transform, 0.4s);
+
+  &.active { transform: translateX(0); }
+
+  .mobile-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    .mobile-logo img { height: 40px; }
+    .close-menu { font-size: 22px; cursor: pointer; }
   }
 
-  .header-actions .phone-action .contact-details a {
-    color: $heading-color !important;
+  ul.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li a {
+      display: block;
+      padding: 12px 0;
+      font-size: 14px;
+      font-weight: 500;
+      color: $heading-color;
+    }
+
+    .sub-menu {
+      padding-left: 15px;
+      margin: 5px 0;
+
+      li a { font-size: 13px; padding: 8px 0; }
+    }
   }
 
-  .mobile-menu-toggle button span {
-    background: $heading-color !important;
+  .mobile-contact {
+    margin-top: 25px;
+
+
+    .contact-info-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+
+      .icon-circle {
+        @include flex-center;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, $primary-color, $secondary-color);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+
+        img {
+          width: 16px;
+          height: 16px;
+          filter: brightness(0) invert(1);
+        }
+      }
+
+      a { font-size: 14px;font-weight: 800; color: $heading-color; text-decoration: none; }
+    }
+  }
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 1024px) {
+  .main-navigation { display: none; }
+  .mobile-menu-toggle { display: block; }
+}
+
+/* --- Mobile hides contact info in header --- */
+@media (max-width: 1100px) {
+  .header-actions .contact-info-group {
+    display: none; // hide from main header
+  }
+
+  /* Mobile menu will still show phone/email */
+  .mobile-contact {
+    display: block;
   }
 }

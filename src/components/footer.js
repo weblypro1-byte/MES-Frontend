@@ -140,7 +140,7 @@ const Footer = () => {
             <li>
               Email:{" "}
               <a href="mailto:Gov-Buy@modern-sol.com">
-                Gov-Buy@modern-sol.com
+              Sales@modern-sol.com
               </a>
             </li>
             <li>
