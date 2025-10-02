@@ -603,14 +603,14 @@ $white: #FFFFFF;
 // ✅ Mobile screens
 @media (max-width: 768px) {
   .brand-logo .logo {
-    height: 45px;
+    height: 50px;
   }
 }
 
 // ✅ Extra small screens
 @media (max-width: 480px) {
   .brand-logo .logo {
-    height: 35px;
+    height: 45px;
   }
 }
 }
