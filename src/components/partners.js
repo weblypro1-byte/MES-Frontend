@@ -28,7 +28,7 @@ const PartnersPage = () => {
     e.preventDefault();
     
     try {
-      const res = await fetch("http://localhost:5001/api/partner", {
+      const res = await fetch("https://mes-backend-psi.vercel.app/api/partner", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

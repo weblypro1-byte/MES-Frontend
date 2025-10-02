@@ -11,7 +11,7 @@ const Contact = () => {
 
   const handleSubmit = async (values) => {
     try {
-      const res = await fetch("http://localhost:5001/api/contact", {
+      const res = await fetch("https://mes-backend-psi.vercel.app/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
