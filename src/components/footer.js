@@ -36,7 +36,7 @@ const Footer = () => {
     }
 
     try {
-      const response = await fetch("https://mes-backend-psi.vercel.app/api/footer/newsletter", {
+      const response = await fetch("https://mes-backend-psi.vercel.app/api/footer/newsletter ", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),

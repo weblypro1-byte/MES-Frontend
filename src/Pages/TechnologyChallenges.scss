@@ -171,3 +171,17 @@ background: linear-gradient(135deg, #1129dbb7,  #071899);
     }
   }
 }
+
+  .map-wrapper {
+    margin-top: 6px;
+    .map-container {
+      width: 100%;
+      height: 340px;
+      max-height: 480px;
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+    }
+  }
