@@ -93,8 +93,8 @@ const Contact = () => {
                 </div>
                 <div className="contact-text">
                   <div className="label">Send Email</div>
-                  <a href="mailto:sales@cirrussystemsus.com">
-                  Gov-Buy@modern-sol.com
+                  <a href="mailto:Sales@modern-sol.com">
+                  Sales@modern-sol.com
                   </a>
                 </div>
               </div>
@@ -106,7 +106,7 @@ const Contact = () => {
                 <div className="contact-text">
                   <div className="label">Visit Now</div>
                   <a
-                    href="https://www.google.com/maps/place/618+S+Broad+St+%232,+Lansdale,+PA+19446,+USA"
+                  href="https://www.google.com/maps?ll=35.410368,-119.140743&z=16&t=m&hl=en&gl=US&mapclient=embed&q=12420+Colorado+Ave+Bakersfield,+CA+93312+USA"
                     target="_blank"
                     rel="noreferrer"
                   >
