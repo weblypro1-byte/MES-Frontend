@@ -3,21 +3,21 @@ import "./CompanyHistory.scss";
 
 export default function CompanyHistory() {
   return (
-    <>
-    <header
-    className="contact-hero"
-    style={{
-      backgroundImage: `url("https://res.cloudinary.com/dz7nbmwai/image/upload/v1758696077/Hero_t6sv76.webp")`,
-    }}
-    role="banner"
-  >
-    <div className="hero-inner">
-      <h1 className="hero-title">ABOUT US</h1>
-      {/* <nav className="hero-breadcrumb" aria-label="Breadcrumb">
-        HOME <span className="sep">›</span> About us
-      </nav> */}
-    </div>
-  </header>
+
+<>
+
+<div className="contact-hero"
+        style={{
+          backgroundImage: `url("https://res.cloudinary.com/dz7nbmwai/image/upload/v1758696077/Hero_t6sv76.webp")`,
+        }}
+        role="banner"
+      >
+        <div className="hero-inner">
+          <h1 className="hero-title">ABOUT US</h1>
+         
+        </div>
+      </div>
+
 
     <section id="company-history">
       <div className="container">
@@ -44,6 +44,6 @@ export default function CompanyHistory() {
         </div>
       </div>
     </section>
-    </>
+   </>
   );
 }

@@ -1,3 +1,5 @@
+
+
 #company-history {
     padding: 5rem 2rem;
     background: #fff;
@@ -94,18 +96,7 @@
         margin-top: 0;
       }
     }
-  }.contact-hero {
-  
 
-    /* Blue overlay with blur */
-    &::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 15, 150, 0.433) !important; // blue overlay
-     
-   
-    }
-  
   }
+  
   

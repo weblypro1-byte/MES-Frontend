@@ -11,7 +11,7 @@ const sectionVariant = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
 };
 
-const Home = () => {
+const Aboutus = () => {
   return (
     <div>
       {/* HERO */}
@@ -65,4 +65,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Aboutus;
