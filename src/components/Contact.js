@@ -83,7 +83,7 @@ const Contact = () => {
                 </div>
                 <div className="contact-text">
                   <div className="label">Sales</div>
-                  <a href=""> (will provide later)</a>
+                  <a href="(845)4933566"> (845) 493 3566</a>
                 </div>
               </div>
 
@@ -106,9 +106,7 @@ const Contact = () => {
                 <div className="contact-text">
                   <div className="label">Visit Now</div>
                   <a
-                  href="https://www.google.com/maps?ll=35.410368,-119.140743&z=16&t=m&hl=en&gl=US&mapclient=embed&q=12420+Colorado+Ave+Bakersfield,+CA+93312+USA"
-                    target="_blank"
-                    rel="noreferrer"
+                 
                   >
                 12420 Colorado Ave, Bakersfield, CA 93312, USA.
                   </a>

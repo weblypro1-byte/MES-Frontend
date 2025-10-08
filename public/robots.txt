@@ -1,3 +1,2 @@
 User-agent: *
-Allow: /
-Sitemap: https://modern-sol.com/sitemap.xml
+Disallow:
