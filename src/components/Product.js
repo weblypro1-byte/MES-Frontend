@@ -5,38 +5,24 @@ import React from "react";
 import "./Product.scss";
 import { message } from "antd"; // Add this import
 
-import card1 from "../assets/Products Card/card1.png";
-import card2 from "../assets/Products Card/card2.png";
-import card3 from "../assets/Products Card/card3.png";
-import card4 from "../assets/Products Card/card4.png";
-import card5 from "../assets/Products Card/card5.png";
-import card6 from "../assets/Products Card/card6.png";
-import card7 from "../assets/Products Card/card7.png";
-import card8 from "../assets/Products Card/card8.png";
-import card9 from "../assets/Products Card/card9.png";
-import card10 from "../assets/Products Card/card10.png";
-import card11 from "../assets/Products Card/card11.png";
-import card12 from "../assets/Products Card/card12.png";
-import card13 from "../assets/Products Card/card13.png";
-import card14 from "../assets/Products Card/card14.png";
-import card15 from "../assets/Products Card/card15.png";
+
 
 const products = [
-  { id: 1, title: "AI Analytics", image: card1, desc: "Real-time AI-powered insights and analytics for businesses looking to leverage artificial intelligence in every department of their organization." },
-  { id: 2, title: "Cloud Solutions", image: card2, desc: "Scale securely with our cloud solutions, ensuring your data is safe, accessible, and optimized for performance across all devices." },
-  { id: 3, title: "Cybersecurity", image: card3, desc: "Protect your company from evolving digital threats with our advanced cybersecurity tools and monitoring services." },
-  { id: 4, title: "Automation Tools", image: card4, desc: "Automate repetitive tasks and streamline workflow processes to increase productivity and reduce operational costs." },
-  { id: 5, title: "Data Management", image: card5, desc: "Organize, analyze, and manage your data seamlessly to make better business decisions and improve operational efficiency." },
-  { id: 6, title: "IoT Solutions", image: card6, desc: "Connect and monitor devices across your organization with Internet of Things technology for smarter operations." },
-  { id: 7, title: "Mobile Apps", image: card7, desc: "Engage your audience with sleek, user-friendly mobile applications designed to meet modern business needs." },
-  { id: 8, title: "Web Development", image: card8, desc: "Create modern, responsive websites that look great on any device and provide a seamless user experience." },
-  { id: 9, title: "Blockchain Tech", image: card9, desc: "Implement secure and transparent blockchain solutions to enhance your business processes and data integrity." },
-  { id: 10, title: "AR/VR Solutions", image: card10, desc: "Deliver immersive augmented and virtual reality experiences that engage and inspire users." },
-  { id: 11, title: "Enterprise Software", image: card11, desc: "Streamline your operations with scalable enterprise software tailored to your organization's needs." },
-  { id: 12, title: "E-Commerce", image: card12, desc: "Boost online sales and improve customer experience with our comprehensive e-commerce solutions." },
-  { id: 13, title: "Digital Marketing", image: card13, desc: "Expand your brand and reach your target audience with powerful digital marketing strategies." },
-  { id: 14, title: "Customer Support AI", image: card14, desc: "Implement AI chatbots and assistants to provide fast and effective customer support around the clock." },
-  { id: 15, title: "Big Data", image: card15, desc: "Uncover hidden trends and insights using advanced big data analytics tools and platforms." },
+  { id: 1, title: "AI Analytics", image: "https://res.cloudinary.com/dz7nbmwai/image/upload/v1758695539/card1_jkqaii.png", desc: "Real-time AI-powered insights and analytics for businesses looking to leverage artificial intelligence in every department of their organization." },
+  { id: 2, title: "Cloud Solutions", image: "https://res.cloudinary.com/dz7nbmwai/image/upload/v1758695540/card2_fzttfm.png", desc: "Scale securely with our cloud solutions, ensuring your data is safe, accessible, and optimized for performance across all devices." },
+  { id: 3, title: "Cybersecurity", image: "https://res.cloudinary.com/dz7nbmwai/image/upload/v1758695540/card3_dfeapj.png", desc: "Protect your company from evolving digital threats with our advanced cybersecurity tools and monitoring services." },
+  { id: 4, title: "Automation Tools", image: "https://res.cloudinary.com/dz7nbmwai/image/upload/v1758695540/card4_g8qwiw.png", desc: "Automate repetitive tasks and streamline workflow processes to increase productivity and reduce operational costs." },
+  { id: 5, title: "Data Management", image: "https://res.cloudinary.com/dz7nbmwai/image/upload/v1758695540/card5_todzrp.png", desc: "Organize, analyze, and manage your data seamlessly to make better business decisions and improve operational efficiency." },
+  { id: 6, title: "IoT Solutions", image: "https://res.cloudinary.com/dz7nbmwai/image/upload/v1758695541/card6_m7urmm.png", desc: "Connect and monitor devices across your organization with Internet of Things technology for smarter operations." },
+  { id: 7, title: "Mobile Apps", image:"https://res.cloudinary.com/dz7nbmwai/image/upload/v1758695541/card7_opmxaa.png", desc: "Engage your audience with sleek, user-friendly mobile applications designed to meet modern business needs." },
+  { id: 8, title: "Web Development", image: "https://res.cloudinary.com/dz7nbmwai/image/upload/v1758695541/card8_ihizu6.png", desc: "Create modern, responsive websites that look great on any device and provide a seamless user experience." },
+  { id: 9, title: "Blockchain Tech", image: "https://res.cloudinary.com/dz7nbmwai/image/upload/v1758695543/card9_esaz9u.png", desc: "Implement secure and transparent blockchain solutions to enhance your business processes and data integrity." },
+  { id: 10, title: "AR/VR Solutions", image: "https://res.cloudinary.com/dz7nbmwai/image/upload/v1758695543/card10_ecbc01.png", desc: "Deliver immersive augmented and virtual reality experiences that engage and inspire users." },
+  { id: 11, title: "Enterprise Software", image:"https://res.cloudinary.com/dz7nbmwai/image/upload/v1758695544/card11_qtj0fa.png", desc: "Streamline your operations with scalable enterprise software tailored to your organization's needs." },
+  { id: 12, title: "E-Commerce", image: "https://res.cloudinary.com/dz7nbmwai/image/upload/v1758695544/card12_c4hntp.png", desc: "Boost online sales and improve customer experience with our comprehensive e-commerce solutions." },
+  { id: 13, title: "Digital Marketing", image: "https://res.cloudinary.com/dz7nbmwai/image/upload/v1758695544/card13_w81amh.png", desc: "Expand your brand and reach your target audience with powerful digital marketing strategies." },
+  { id: 14, title: "Customer Support AI", image: "https://res.cloudinary.com/dz7nbmwai/image/upload/v1758695545/card14_h6aj86.png", desc: "Implement AI chatbots and assistants to provide fast and effective customer support around the clock." },
+  { id: 15, title: "Big Data", image: "https://res.cloudinary.com/dz7nbmwai/image/upload/v1758695545/card15_bzvy2r.png", desc: "Uncover hidden trends and insights using advanced big data analytics tools and platforms." },
 ];
 
 const Product = () => {
