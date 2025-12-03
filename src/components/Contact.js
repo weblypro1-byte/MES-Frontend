@@ -83,7 +83,7 @@ const Contact = () => {
                 </div>
                 <div className="contact-text">
                   <div className="label">Sales</div>
-                  <a href="(845)4933566"> (845) 493 3566</a>
+                  <a href="6614242333"> (661)424-2333</a>
                 </div>
               </div>
 
