@@ -89,7 +89,7 @@ const Header = () => {
                     <img src="https://cdn-icons-png.flaticon.com/128/9772/9772488.png" alt="Phone Icon" />
                   </div>
                   <div className="contact-details">
-                  <a href="tel:(845)4933566">(845) 493 3566</a>
+                  <a href="tel:6614242333">(661)424-2333</a>
 
                   </div>
                 </div>
